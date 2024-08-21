@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+    background: #fff;
+}
+
+::-webkit-scrollbar button {
+    background: gold;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff
+}
+
+::-webkit-scrollbar-track {
+    background: red;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: royalblue;
+}
+
+.white-nav {
+    background: rgb(7, 28, 95);
+    background: royalblue
+}
+
+.prog-cont:hover .prog-div {
+    width: 100%;
+    transform: translateX(0);
+    background: rgb(7, 28, 95);
+}
+
+.prog-cont:hover .prog-gold {
+    background: rgb(255, 215, 0);
+}
+
+.tender-show {
+    animation: alert ease-out .9s infinite;
+}
+
+@keyframes alert {
+    0% {
+        opacity: 1
+    }
+ 
+    100% {
+        opacity: 0
+    }
+}
+
+  
