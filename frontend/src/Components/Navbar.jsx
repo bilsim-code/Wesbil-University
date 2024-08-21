@@ -1,5 +1,5 @@
 import { Link as RouterLink, useLocation } from "react-router-dom";
-//import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import logoImg from "../assets/wesbil_logo.png";
 import contact_icon from "../assets/contact.png";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 overflow-hidden`}
+      className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 overflow-hidden ${location.pathname === '/courses' || location.pathname === '/research' ? 'bg-black' : ''}`}
     >
       <RouterLink to={"/"}>
         <img
@@ -53,13 +53,18 @@ const Navbar = () => {
             </RouterLink>
           </li>
           <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[10px] font-medium">
-            <RouterLink
+            {location.pathname === "/" ? (
+              <ScrollLink to="school" spy={true} smooth={true} offset={100} onClick={() => setMenuShow(false)} className="cursor-pointer hover:border-b-4 border-solid border-gold pb-1 hover:text-gold transition-colors duration-400 ease-linear no-underline" >Schools</ScrollLink>
+            ):(
+                  <RouterLink
               to="/#school" // Points to the home page with hash
               onClick={() => setMenuShow(false)}
               className="cursor-pointer hover:border-b-4 border-solid border-gold pb-1 hover:text-gold transition-colors duration-400 ease-linear"
             >
               Schools
             </RouterLink>
+            )}
+        
           </li>
           <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[10px] font-medium">
             <RouterLink

@@ -44,6 +44,8 @@ const App = () => {
         <Route path="/student-portal" element={<StudentPortal />} />
         <Route path="/staff-login" element={<StaffPortal />} />
 
+        <Route path="/join-us" element={<JoinUs />} />
+
         <Route
           path="/*"
           element={
@@ -62,7 +64,6 @@ const App = () => {
                 <Route path="/sms" element={<Sms />} />
                 <Route path="/soe" element={<Soe />} />
                 {/* ALT ROUTES */}
-                <Route path="/join-us" element={<JoinUs />} />
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/research" element={<Research />} />
                 <Route path="/schools" element={<Schools />} />

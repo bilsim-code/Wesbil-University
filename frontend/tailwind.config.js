@@ -14,11 +14,14 @@ export default {
       'black': "#000",
       'royalblue': 'royalblue',
       'transparent': 'transparent',
+      'almost-black': "#333",
+      'red': "red",
       'gray': '#959595',
       'gray-fade': "rgba(128, 128, 128, 0.216)",
       'blue-shade-1': 'rgb(7, 28, 95)',
       'blue-shade-fade': 'rgba(7, 28, 95, 0.582)',
-      'heroBg': "rgba(8,0, 58, .1)"
+      'heroBg': "rgba(8,0, 58, .1)",
+      'purple': 'purple'
     },
     screens: {
       'nav-ul-md': '890px',
@@ -29,6 +32,8 @@ export default {
       'test-lg': "560px",
       'test-md': "370px",
       'test-sm': "320px",
+      '308': '308px',
+      '430px': '430px'
     },
 
     extend: {
