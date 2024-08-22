@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 overflow-hidden ${location.pathname === '/courses' || location.pathname === '/research' ? 'bg-black' : ''}`}
+      className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 overflow-hidden ${location.pathname === '/courses' || location.pathname === '/research' || location.pathname === "/mylibrary" ? 'bg-black' : ''}`}
     >
       <RouterLink to={"/"}>
         <img
