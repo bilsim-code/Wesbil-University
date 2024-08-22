@@ -18,7 +18,7 @@ const JoinUs = () => {
             <label htmlFor="firstName">
               <span>First Name</span> <span className="text-red">*</span>
             </label>
-            <input
+            <input 
               type="text"
               name="firstName"
               id="firstName"
