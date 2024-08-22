@@ -2,6 +2,8 @@ import { Link } from "react-scroll";
 import faculty1 from "../assets/faculty1.jpg";
 import faculty2 from "../assets/faculty2.jpg";
 import FacultyCarousel from "../Components/FacultyCarousel";
+import { ArrowRightCircle } from "react-feather";
+import { useEffect, useState } from "react";
 
 const Courses = () => {
   const schools = [
@@ -35,49 +37,47 @@ const Courses = () => {
           ],
         },
       ],
-
-      //faculty
       faculty: [
         {
           image: faculty1,
-          name: "whoever whoever",
-          qualifications: "Phd in Computer Science from Princeton University",
+          name: "Dr. John Smith",
+          qualifications: "PhD in Computer Science from Stanford University",
           role: "Head of Department of Computer Science",
         },
         {
-          image: faculty2,
-          name: "whoever whoever",
-          qualifications: "Phd in Information Systems",
+          image: faculty1,
+          name: "Dr. John Doe",
+          qualifications: "PhD in Information Systems from MIT",
           role: "Head of Department of Information Systems",
         },
         {
-          image: faculty1,
-          name: "blablabla",
-          qualifications: "Masters in IT",
+          image: faculty2,
+          name: "Dr. Emily Johnson",
+          qualifications: "Masters in IT from Harvard University",
           role: "Head of Department of Information Technology",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Prof. Michael Brown",
+          qualifications: "PhD in Software Engineering",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Prof. Sarah Davis",
+          qualifications: "PhD in Data Science",
           role: "Lecturer",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Dr. David Wilson",
+          qualifications: "Masters in Computer Science",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Dr. Lisa Martinez",
+          qualifications: "PhD in Cybersecurity",
           role: "Lecturer",
         },
       ],
@@ -103,49 +103,47 @@ const Courses = () => {
           ],
         },
       ],
-
-      //faculty
       faculty: [
         {
-          image: faculty1,
-          name: "",
-          qualifications: "",
-          role: "Head of Department of Marketing and Management",
-        },
-        {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Dr. Karen Lee",
+          qualifications: "PhD in Accounting from University of Chicago",
           role: "Head of Department of Accounting and Finance",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Dr. Robert Wilson",
+          qualifications: "PhD in Marketing from UCLA",
+          role: "Head of Department of Marketing and Management",
+        },
+        {
+          image: faculty2,
+          name: "Prof. Angela Harris",
+          qualifications: "Masters in Finance",
           role: "Lecturer",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Prof. Steven Clark",
+          qualifications: "PhD in Business Administration",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Prof. Olivia Walker",
+          qualifications: "Masters in Marketing",
           role: "Lecturer",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Dr. Daniel Lewis",
+          qualifications: "PhD in Human Resource Management",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Dr. Jessica Taylor",
+          qualifications: "Masters in Strategic Management",
           role: "Lecturer",
         },
       ],
@@ -170,49 +168,47 @@ const Courses = () => {
           ],
         },
       ],
-
-      //faculty
       faculty: [
         {
-          image: faculty1,
-          name: "",
-          qualifications: "",
+          image: faculty2,
+          name: "Dr. Alice Green",
+          qualifications: "MD from Johns Hopkins University",
           role: "Head of Department of Medicine",
         },
         {
-          image: faculty2,
-          name: "",
-          qualifications: "",
+          image: faculty1,
+          name: "Dr. Brian White",
+          qualifications: "PhD in Public Health from Yale University",
           role: "Head of Department of Public Health",
         },
         {
-          image: faculty1,
-          name: "",
-          qualifications: "",
+          image: faculty2,
+          name: "Prof. Nancy Harris",
+          qualifications: "MD in Clinical Medicine",
           role: "Lecturer",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Prof. Steven Adams",
+          qualifications: "MD in Surgery",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Dr. Elizabeth Taylor",
+          qualifications: "PhD in Epidemiology",
           role: "Lecturer",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Dr. Charles King",
+          qualifications: "MD in Internal Medicine",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Dr. Laura Martinez",
+          qualifications: "PhD in Public Health",
           role: "Lecturer",
         },
       ],
@@ -237,49 +233,47 @@ const Courses = () => {
           ],
         },
       ],
-
-      //faculty
       faculty: [
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Dr. Thomas Wright",
+          qualifications: "PhD in Mathematics from Princeton University",
           role: "Head of Department of Mathematics",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Dr. Olivia Young",
+          qualifications: "PhD in Statistics from Cambridge University",
           role: "Head of Department of Statistics",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
-          role: "Lecturer",
-        },
-        {
-          image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Prof. Jack Lewis",
+          qualifications: "Masters in Applied Mathematics",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Prof. Emma Harris",
+          qualifications: "PhD in Mathematical Statistics",
           role: "Lecturer",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Dr. James Robinson",
+          qualifications: "Masters in Statistics",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Dr. Emily Clark",
+          qualifications: "PhD in Computational Mathematics",
+          role: "Lecturer",
+        },
+        {
+          image: faculty1,
+          name: "Dr. Daniel Brown",
+          qualifications: "Masters in Data Science",
           role: "Lecturer",
         },
       ],
@@ -305,54 +299,72 @@ const Courses = () => {
           ],
         },
       ],
-
-      //faculty
       faculty: [
         {
-          image: faculty1,
-          name: "",
-          qualifications: "",
+          image: faculty2,
+          name: "Dr. Julia Allen",
+          qualifications: "PhD in Education from University of Oxford",
           role: "Head of Department of Education",
         },
         {
-          image: faculty2,
-          name: "",
-          qualifications: "",
+          image: faculty1,
+          name: "Dr. Mark Lewis",
+          qualifications: "PhD in Social Sciences from University of Edinburgh",
           role: "Head of Department of Social Sciences",
         },
         {
-          image: faculty1,
-          name: "",
-          qualifications: "",
+          image: faculty2,
+          name: "Prof. Nancy Scott",
+          qualifications: "Masters in Educational Psychology",
           role: "Lecturer",
         },
         {
           image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Prof. Michael Carter",
+          qualifications: "PhD in Sociology",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
-          role: "Lecturer",
-        },
-        {
-          image: faculty1,
-          name: "",
-          qualifications: "",
+          name: "Dr. Jessica Adams",
+          qualifications: "Masters in Social Work",
           role: "Lecturer",
         },
         {
           image: faculty2,
-          name: "",
-          qualifications: "",
+          name: "Dr. Rachel Turner",
+          qualifications: "PhD in Education Policy",
+          role: "Lecturer",
+        },
+        {
+          image: faculty1,
+          name: "Dr. Kevin Thompson",
+          qualifications: "Masters in Counseling Psychology",
           role: "Lecturer",
         },
       ],
     },
   ];
+  
+
+  const [facultyIndex, setFacultyIndex] = useState(
+    Array(schools.length).fill(0)
+  );
+
+  function handleRight() {
+    setFacultyIndex((prevIndexes) => {
+      return prevIndexes.map((index, schoolIndex) => {
+        const school = schools[schoolIndex];
+        return school ? (index < school.faculty.length - 1 ? index + 1 : 0) : index;
+      });
+    });
+  }
+
+  useEffect(() => {
+    const interval = setInterval(handleRight, 8000);
+    return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="min-h-screen mt-32 w-[90%] mx-auto">
@@ -379,10 +391,10 @@ const Courses = () => {
         </ul>
       </div>
 
-      {schools.map((school) => (
+      {schools.map((school, schoolIndex) => (
         <div key={school.id} id={school.id} className="mb-14">
           <h1 className="text-2xl font-bold uppercase pb-10">{school.name}</h1>
-          <div className="">
+          <div>
             <div className="grid grid-cols-3 gap-2.5 max-nav-ul-md:grid-cols-1">
               {school.departments.map((dept) => (
                 <div key={dept.name} className="pb-10">
@@ -397,12 +409,40 @@ const Courses = () => {
                 </div>
               ))}
             </div>
-            <div className="relative">
-              <div className="flex">
+            <div className="relative h-[400px] max-240px:h-[500px] w-[315px] max-w-[100%] overflow-x-hidden">
+              <div
+                className="flex transition-all duration-1000"
+                style={{
+                  transform: `translateX(-${facultyIndex[schoolIndex] * 100}%)`,
+                }}
+              >
                 {school.faculty.map((item, index) => (
                   <FacultyCarousel key={index} item={item} />
                 ))}
               </div>
+              <ArrowRightCircle
+                onClick={() => handleRight()}
+                className="absolute top-[20%] right-0 cursor-pointer bg-white size-8 rounded-full hover:bg-royalblue hover:text-white transition-all duration-300"
+              />
+              <ul className="absolute bottom-0 flex flex-wrap gap-3">
+                {school.faculty.map((_, index) => (
+                  <li
+                    key={index}
+                    onClick={() => {
+                      setFacultyIndex((prevIndexes) => {
+                        const updatedIndexes = [...prevIndexes];
+                        updatedIndexes[schoolIndex] = index;
+                        return updatedIndexes;
+                      });
+                    }}
+                    className={`${
+                      index === facultyIndex[schoolIndex]
+                        ? "bg-royalblue"
+                        : "bg-gray"
+                    } size-5 cursor-pointer`}
+                  ></li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

@@ -33,7 +33,8 @@ export default {
       'test-md': "370px",
       'test-sm': "320px",
       '308': '308px',
-      '430px': '430px'
+      '430px': '430px',
+      '240px': '240px'
     },
 
     extend: {
