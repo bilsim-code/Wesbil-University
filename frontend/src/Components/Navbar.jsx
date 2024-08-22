@@ -75,7 +75,7 @@ const Navbar = () => {
               myLibrary
             </RouterLink>
           </li>
-          <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[10px] font-medium">
+        {/*   <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[10px] font-medium">
             <RouterLink
               onClick={() => setMenuShow(false)}
               to={"eregistrar"}
@@ -83,8 +83,8 @@ const Navbar = () => {
             >
               E-registrar
             </RouterLink>
-          </li>
-          <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[10px] font-medium">
+          </li> */}
+         {/*  <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[10px] font-medium">
             <RouterLink
               onClick={() => setMenuShow(false)}
               to={"elearning"}
@@ -92,7 +92,7 @@ const Navbar = () => {
             >
               E-Learning
             </RouterLink>
-          </li>
+          </li> */}
 
           <OutsideClickHandler onOutsideClick={() => setLinkDropdownOn(false)}>
             {/* Dropdown */}
