@@ -1,6 +1,8 @@
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Sms = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="hero bg-smsHero h-[100vh] bg-no-repeat bg-center bg-cover flex items-center justify-center text-center">
@@ -13,6 +15,8 @@ const Sms = () => {
           </p>
         </div>
       </div>
+
+      <div className="mt-20 mx-4 font-semibold text-2xl cursor-pointer underline hover:no-underline transition-all duration-500 text-purple w-fit" onClick={() => navigate('/courses')}>See Our Courses</div>
       {/* BODY */}
       <div className="mt-20 px-4 max-w-5xl mx-auto">
         <div className="flex flex-col gap-4 bg-royalblue rounded-md shadow-md px-3 py-5 footer-md:flex-row footer-md:items-center">

@@ -1,6 +1,8 @@
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Somed = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="hero bg-somedHero h-[100vh] bg-no-repeat bg-right bg-cover flex items-center justify-center text-center">
@@ -14,6 +16,8 @@ const Somed = () => {
         </div>
       </div>
       {/* BODY */}
+      <div className="mt-20 mx-4 font-semibold text-2xl cursor-pointer underline hover:no-underline transition-all duration-500 text-purple w-fit" onClick={() => navigate('/courses')}>See Our Courses</div>
+
       <div className="mt-20 px-4 max-w-5xl mx-auto">
         <div className="flex flex-col gap-4 bg-royalblue rounded-md shadow-md px-3 py-5  footer-md:flex-row footer-md:items-center ">
           <h3 className="bg-gold flex gap-2 w-fit py-2 px-4 rounded-full items-center font-bold footer-md:w-[200px] group cursor-pointer">
