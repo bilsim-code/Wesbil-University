@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
 
 const JoinUs = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const JoinUs = () => {
             <label htmlFor="firstName">
               <span>First Name</span> <span className="text-red">*</span>
             </label>
-            <input 
+            <input
               type="text"
               name="firstName"
               id="firstName"
@@ -111,7 +112,7 @@ const JoinUs = () => {
             </label>
             {/* make it uppercase */}
             <select name="grade" id="grade" className="form-input rounded">
-              <option value="Grade">KCSE Mean Grade</option>
+              <option value=""><em>KCSE Mean Grade</em></option>
               <option value="A">A</option>
               <option value="A">A-</option>
               <option value="A">B+</option>
@@ -128,42 +129,181 @@ const JoinUs = () => {
         </div>
 
         {/* course and campus */}
-        <div className="grid grid-cols-2 max-430px:grid-cols-1 items-center mb-5 gap-5">
-          <div className="flex flex-col gap-1 w-full">
-            <label htmlFor="course">
-              <span>Course</span> <span className="text-red">*</span>
-            </label>
-            <select
-              name="firstName"
-              id="firstName"
-              className="form-input rounded"
-            >
-              <option value="">select your course</option>
-              <option value="">Lorem.</option>
-              <option value="">Dolore?</option>
-              <option value="">Consequuntur.</option>
-              <option value="">Sapiente!</option>
-              <option value="">Provident?</option>
-              <option value="">Deleniti?</option>
-              <option value="">In.</option>
-              <option value="">Officiis.</option>
-              <option value="">Optio?</option>
-              <option value="">Aspernatur!</option>
-            </select>
-          </div>
-          <div className="flex flex-col gap-1 w-full">
+        <div className="grid grid-cols-2  max-430px:grid-cols-1 items-center mb-5 gap-5">
+            <FormControl fullWidth>
+              <InputLabel id="course-label">
+                Course <span className="text-red">*</span>
+              </InputLabel>
+              <Select
+                labelId="course-label"
+                id="course"
+                name="course"
+                label="Course"
+                defaultValue=""
+                className="rounded "
+                MenuProps={{
+                  PaperProps: {
+                    style: {
+                      whiteSpace: "normal", // Ensures text wraps
+                    },
+                  },
+                }}
+              >
+                <MenuItem value="">
+                  <em>Select your course</em>
+                </MenuItem>
+                <MenuItem value="bsc-cs">
+                  Bachelor of Science in Computer Science
+                </MenuItem>
+                <MenuItem value="bsc-se">
+                  Bachelor of Science in Software Engineering
+                </MenuItem>
+                <MenuItem value="bsc-ds">
+                  Bachelor of Science in Data Science
+                </MenuItem>
+                <MenuItem value="diploma-cs">
+                  Diploma in Computer Science
+                </MenuItem>
+                <MenuItem value="bsc-is">
+                  Bachelor of Science in Information Systems
+                </MenuItem>
+                <MenuItem value="diploma-is">
+                  Diploma in Information Systems
+                </MenuItem>
+                <MenuItem value="certificate-is">
+                  Certificate in Information Systems
+                </MenuItem>
+                <MenuItem value="bsc-it">
+                  Bachelor of Science in Information Technology
+                </MenuItem>
+                <MenuItem value="btech-it">
+                  Bachelor of Technology in Information Technology
+                </MenuItem>
+                <MenuItem value="diploma-it">
+                  Diploma in Information Technology
+                </MenuItem>
+                <MenuItem value="bcom-acc">
+                  Bachelor of Commerce in Accounting
+                </MenuItem>
+                <MenuItem value="bcom-fin">
+                  Bachelor of Commerce in Finance
+                </MenuItem>
+                <MenuItem value="diploma-acc">Diploma in Accounting</MenuItem>
+                <MenuItem value="bcom-mkt">
+                  Bachelor of Commerce in Marketing
+                </MenuItem>
+                <MenuItem value="bcom-hrm">
+                  Bachelor of Commerce in Human Resource Management
+                </MenuItem>
+                <MenuItem value="diploma-mkt">Diploma in Marketing</MenuItem>
+                <MenuItem value="mbbs">
+                  Bachelor in Medicine and Surgery
+                </MenuItem>
+                <MenuItem value="bsc-nur">
+                  Bachelor of Science in Nursing
+                </MenuItem>
+                <MenuItem value="diploma-clin-med">
+                  Diploma in Clinical Medicine
+                </MenuItem>
+                <MenuItem value="bsc-clin-health">
+                  Bachelor of Science in Clinical Health
+                </MenuItem>
+                <MenuItem value="diploma-clin-health">
+                  Diploma in Clinical Health
+                </MenuItem>
+                <MenuItem value="bsc-math">
+                  Bachelor of Science in Mathematics
+                </MenuItem>
+                <MenuItem value="bsc-appl-math">
+                  Bachelor of Science in Applied Mathematics
+                </MenuItem>
+                <MenuItem value="diploma-math">Diploma in Mathematics</MenuItem>
+                <MenuItem value="bsc-stats">
+                  Bachelor of Science Statistics
+                </MenuItem>
+                <MenuItem value="diploma-stats">Diploma in Statistics</MenuItem>
+                <MenuItem value="bed-arts">
+                  Bachelor of Education in Arts
+                </MenuItem>
+                <MenuItem value="bed-sci">
+                  Bachelor of Education in Science
+                </MenuItem>
+                <MenuItem value="diploma-ed">Diploma in Education</MenuItem>
+                <MenuItem value="ba-soc">
+                  Bachelor of Arts in Sociology
+                </MenuItem>
+                <MenuItem value="ba-psych">
+                  Bachelor of Arts in Psychology
+                </MenuItem>
+                <MenuItem value="diploma-sw">Diploma in Social Work</MenuItem>
+              </Select>
+            </FormControl>
+
+            <FormControl fullWidth>
+              <InputLabel id="campus-label">
+                Campus<span className="text-red">*</span>
+              </InputLabel>
+              <Select
+                labelId="campus-label"
+                id="campus"
+                name="campus"
+                label="Campus"
+                defaultValue=""
+                className="rounded "
+                MenuProps={{
+                  PaperProps: {
+                    style: {
+                      whiteSpace: "normal", // Ensures text wraps
+                    },
+                  },
+                }}
+              >
+                <MenuItem value="">
+                  <em>Select your preferred campus</em>
+                </MenuItem>
+                <MenuItem value="main">
+                 Main Campus
+                </MenuItem>
+                <MenuItem value="alt">
+                  Alt Campus
+                </MenuItem>
+              </Select>
+            </FormControl>
+
+
+         {/*    <FormControl fullWidth>
+              <InputLabel id="campus-label">Preferred Campus <span className="text-red">*</span></InputLabel>
+              <Select
+              labelId="course-label"
+              id="course"
+              name="course"
+              defaultValue=""
+              className="rounded"
+              MenuProps={{
+                PaperProps: {
+                  style: {
+                    whitespace: 'normal'
+                  }
+                }
+              }}
+              >
+                <MenuItem value="">
+                <em>Select your preferred campus</em>
+                </MenuItem>
+                <MenuItem value="main">Main Campus</MenuItem>
+        <MenuItem value="alt">Alt Campus</MenuItem>
+
+              </Select>
+            </FormControl> */}
+         {/*  <div className="flex flex-col gap-1 w-full">
             <label htmlFor="campus">
               <span>Preferred Campus</span> <span className="text-red">*</span>
             </label>
-            <select
-              name="campus"
-              id="campus"
-              className="form-input rounded"
-            >
+            <select name="campus" id="campus" className="form-input rounded">
               <option value="Main">Main Campus</option>
               <option value="other">alt campus</option>
             </select>
-          </div>
+          </div> */}
         </div>
 
         <button className="bg-black text-white py-2 px-10 my-5 font-medium">
