@@ -22,7 +22,6 @@ import Diploma from "./Pages/Diploma";
 import Bachelors from "./Pages/Bachelors";
 import Masters from "./Pages/Masters";
 import PostGraduate from "./Pages/PostGraduate";
-import OnlineApplication from "./Pages/OnlineApplication";
 import ICTSupport from "./Pages/ICTSupport";
 import RequestStudentEmail from "./Pages/RequestStudentEmail";
 import StudentPortal from "./Pages/StudentPortal";
@@ -30,6 +29,8 @@ import StaffPortal from "./Pages/StaffPortal";
 import NewPrograms from "./Pages/NewPrograms";
 import OnlineClasses from "./Pages/OnlineClasses";
 import { useEffect } from "react";
+import StudentPortalLogin from "./Pages/StudentPortalLogin";
+import StaffPortalLogin from "./Pages/StaffPortalLogin";
 
 const App = () => {
   const location = useLocation();
@@ -41,9 +42,9 @@ const App = () => {
     <div className="app overflow-x-hidden">
       <Routes>
         {/* INDEPENDENT ROUTES */}
-        <Route path="/student-portal" element={<StudentPortal />} />
-        <Route path="/staff-login" element={<StaffPortal />} />
-
+       
+       <Route path="/student-portal-login" element={<StudentPortalLogin/>} />
+       <Route path="/staff-portal-login" element={<StaffPortalLogin/>} />
         <Route path="/join-us" element={<JoinUs />} />
 
         <Route
@@ -57,6 +58,8 @@ const App = () => {
                 <Route path="/eregistrar" element={<ERegistrar />} />
                 <Route path="/elearning" element={<Elearning />} />
                 <Route path="/portals" element={<Portals />} />
+                <Route path="/student-portal" element={<StudentPortal />} />
+                <Route path="/staff-login" element={<StaffPortal />} />
                 {/* SCHOOLS */}
                 <Route path="/sob" element={<Sob />} />
                 <Route path="/sot" element={<Sot />} />
@@ -77,10 +80,6 @@ const App = () => {
                 <Route path="/masters" element={<Masters />} />
                 <Route path="/post-graduate" element={<PostGraduate />} />
                 {/* DROPDOWN */}
-                <Route
-                  path="/online-application"
-                  element={<OnlineApplication />}
-                />
                 <Route path="/ict-support" element={<ICTSupport />} />
                 <Route
                   path="/student-email"

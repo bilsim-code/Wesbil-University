@@ -1,7 +1,7 @@
 const StudentPortal = () => {
   return (
     <div>
-      
+      Student Portal 
     </div>
   );
 };
