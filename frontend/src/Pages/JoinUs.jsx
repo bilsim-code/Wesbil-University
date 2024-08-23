@@ -132,7 +132,7 @@ const JoinUs = () => {
         </div>
 
         {/* course and campus */}
-        <div className="grid grid-cols-2  max-430px:grid-cols-1 items-center mb-5 gap-5">
+        <div className="grid grid-cols-3  max-430px:grid-cols-1 items-center mb-5 gap-5">
             <FormControl fullWidth>
               <InputLabel id="course-label">
                 Course <span className="text-red">*</span>
@@ -272,41 +272,38 @@ const JoinUs = () => {
                 </MenuItem>
               </Select>
             </FormControl>
-
-
-         {/*    <FormControl fullWidth>
-              <InputLabel id="campus-label">Preferred Campus <span className="text-red">*</span></InputLabel>
+            {/* Mode of learning */}
+            <FormControl fullWidth>
+              <InputLabel id="mode-label">
+                Mode of Learning<span className="text-red">*</span>
+              </InputLabel>
               <Select
-              labelId="course-label"
-              id="course"
-              name="course"
-              defaultValue=""
-              className="rounded"
-              MenuProps={{
-                PaperProps: {
-                  style: {
-                    whitespace: 'normal'
-                  }
-                }
-              }}
+                labelId="mode-label"
+                id="mode"
+                name="mode"
+                label="Mode"
+                defaultValue=""
+                className="rounded "
+                MenuProps={{
+                  PaperProps: {
+                    style: {
+                      whiteSpace: "normal", // Ensures text wraps
+                    },
+                  },
+                }}
               >
                 <MenuItem value="">
-                <em>Select your preferred campus</em>
+                  <em>Select your preferred Mode of learning</em>
                 </MenuItem>
-                <MenuItem value="main">Main Campus</MenuItem>
-        <MenuItem value="alt">Alt Campus</MenuItem>
-
+                <MenuItem value="physical">
+                 Physical
+                </MenuItem>
+                <MenuItem value="online">
+                  Online
+                </MenuItem>
               </Select>
-            </FormControl> */}
-         {/*  <div className="flex flex-col gap-1 w-full">
-            <label htmlFor="campus">
-              <span>Preferred Campus</span> <span className="text-red">*</span>
-            </label>
-            <select name="campus" id="campus" className="form-input rounded">
-              <option value="Main">Main Campus</option>
-              <option value="other">alt campus</option>
-            </select>
-          </div> */}
+            </FormControl>
+
         </div>
 
         <button className="bg-black text-white py-2 px-10 my-5 font-medium">
