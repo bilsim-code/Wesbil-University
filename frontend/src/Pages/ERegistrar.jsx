@@ -2,7 +2,7 @@
 
 const ERegistrar = () => {
   return (
-    <div>ERegistrar</div>
+    <div className="mt-24 min-h-screen ">ERegistrar</div>
   )
 }
 
