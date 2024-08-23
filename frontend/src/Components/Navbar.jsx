@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 import logoImg from "../assets/wesbil_logo.png";
 import contact_icon from "../assets/contact.png";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { Search, Menu, XOctagon } from "react-feather";
+import { Search, Menu, XOctagon, Home } from "react-feather";
 import { useEffect, useRef, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import profile from '../assets/faculty1.jpg';
@@ -32,14 +32,22 @@ const Navbar = () => {
       ref={navRef}
       className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 overflow-hidden ${location.pathname === '/courses' || location.pathname === '/research' || location.pathname === "/mylibrary"  || location.pathname === "/student-portal" || location.pathname === '/staff-portal' || location.pathname === '/student-portal/elearning' || location.pathname === '/student-portal/eregistrar' ? 'bg-black' : ''}`}
     >
-      <RouterLink to={"/"}>
+      {location.pathname === "/student-portal/eregistrar" ? (
+        <div className="flex items-center gap-5">
+          <Home className="text-white cursor-pointer w-8 h-8"/>
+          <span className="text-white font-medium text-lg max-400px:hidden">Wesbil University(E-Registrar)</span>
+        </div>
+      ) : (
+             <RouterLink to={"/"}>
         <img
           src={logoImg}
           alt="wesbil-logo"
           title="wesbil-logo"
           className="w-[80px]  h-16 rounded-[4px] object-cover "
         />
-      </RouterLink>
+      </RouterLink> 
+      )}
+
       <OutsideClickHandler onOutsideClick={() => setMenuShow(false)}>
         <ul
           className={`nav-ul bg-royalblue fixed right-0 pt-20 pb-10 px-6 rounded-bl-xl w-64 max-w-[100%] nav-ul-md:flex list-none nav-ul-md:text-lg nav-ul-md:items-center nav-ul-md:w-auto nav-ul-md:relative nav-ul-md:p-0 nav-ul-md:bg-transparent nav-ul-md:top-0 top-[-600px] transition-all duration-300 ${menuShow ? "top-[0]" : null}`}
