@@ -11,7 +11,7 @@ import {
 // eslint-disable-next-line react/prop-types
 const PortalSidebar = ({setClickState}) => {
   return (
-    <div className="w-[20%] border-r min-h-screen">
+    <div className="w-[20%] max-1120px:w-[250px]  max-test-lg:w-[350px] max-w-[80%] border-r min-h-screen">
       <div onClick={() => setClickState("profile")} className="flex items-center mb-10 pt-4">
         <img
           src={profile}
