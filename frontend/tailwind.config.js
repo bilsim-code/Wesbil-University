@@ -36,7 +36,8 @@ export default {
       '308': '308px',
       '430px': '430px',
       '240px': '240px',
-      '400px': '400px'
+      '400px': '400px',
+      '680px': '680px'
     },
 
     extend: {
