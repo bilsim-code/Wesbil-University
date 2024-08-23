@@ -7,11 +7,13 @@ import {
   FaBed,
   FaUtensils,
 } from "react-icons/fa";
+import {BiX} from 'react-icons/bi'
 
 // eslint-disable-next-line react/prop-types
 const PortalSidebar = ({setClickState}) => {
   return (
-    <div className="w-[20%] max-1120px:w-[250px]  max-test-lg:w-[350px] max-w-[80%] border-r min-h-screen">
+    <div className="w-[20%] max-1120px:w-[250px]  max-test-lg:w-[350px] max-w-[80%] border-r min-h-screen relative">
+        <BiX className="absolute right-4 size-8 cursor-pointer"/>
       <div onClick={() => setClickState("profile")} className="flex items-center mb-10 pt-4">
         <img
           src={profile}
