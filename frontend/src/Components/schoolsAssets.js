@@ -24,7 +24,7 @@ const schoolAssets = [
     {
         image: schools,
         p: "Our Schools",
-        url: "schools"
+        url: "courses"
     },
     {
         image: campusLife,
