@@ -64,7 +64,10 @@ const JoinUs = () => {
                 name="phone"
                 id="phone"
                 placeholder="Enter your phone number"
-                className="form-input rounded w-full"
+                className="form-input rounded w-full "
+                /*
+                if you want to remove the focus
+                 focus: focus:ring-0 focus:border-gold  */
               />
             </div>
           </div>

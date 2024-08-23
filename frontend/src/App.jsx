@@ -55,8 +55,8 @@ const App = () => {
               <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/mylibrary" element={<MyLibrary />} />
-                <Route path="/eregistrar" element={<ERegistrar />} />
-                <Route path="/elearning" element={<Elearning />} />
+                <Route path="/student-portal/eregistrar" element={<ERegistrar />} />
+                <Route path="/student-portal/elearning" element={<Elearning />} />
                 <Route path="/portals" element={<Portals />} />
                 <Route path="/student-portal" element={<StudentPortal />} />
                 <Route path="/staff-login" element={<StaffPortal />} />

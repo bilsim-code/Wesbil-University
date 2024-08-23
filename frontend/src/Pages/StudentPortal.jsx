@@ -1,6 +1,6 @@
 const StudentPortal = () => {
   return (
-    <div>
+    <div className="mt-24 min-h-screen">
       Student Portal 
     </div>
   );

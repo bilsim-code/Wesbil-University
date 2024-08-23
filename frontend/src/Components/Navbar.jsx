@@ -6,6 +6,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Search, Menu, XOctagon } from "react-feather";
 import { useEffect, useRef, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
+import profile from '../assets/faculty1.jpg';
 
 const Navbar = () => {
   const location = useLocation();
@@ -16,7 +17,7 @@ const Navbar = () => {
   const navRef = useRef();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+   const scroll = window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
         navRef.current.classList.add("white-nav");
       } else {
@@ -24,12 +25,12 @@ const Navbar = () => {
       }
     });
 
-    // return() => window.removeEventListener(scroll)
+     return() => window.removeEventListener('scroll', scroll)
   }, []);
   return (
     <nav
       ref={navRef}
-      className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 overflow-hidden ${location.pathname === '/courses' || location.pathname === '/research' || location.pathname === "/mylibrary" ? 'bg-black' : ''}`}
+      className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 overflow-hidden ${location.pathname === '/courses' || location.pathname === '/research' || location.pathname === "/mylibrary"  || location.pathname === "/student-portal" || location.pathname === '/staff-portal' ? 'bg-black' : ''}`}
     >
       <RouterLink to={"/"}>
         <img
@@ -40,7 +41,7 @@ const Navbar = () => {
         />
       </RouterLink>
       <OutsideClickHandler onOutsideClick={() => setMenuShow(false)}>
-        <div
+        <ul
           className={`nav-ul bg-royalblue fixed right-0 pt-20 pb-10 px-6 rounded-bl-xl w-64 max-w-[100%] nav-ul-md:flex list-none nav-ul-md:text-lg nav-ul-md:items-center nav-ul-md:w-auto nav-ul-md:relative nav-ul-md:p-0 nav-ul-md:bg-transparent nav-ul-md:top-0 top-[-600px] transition-all duration-300 ${menuShow ? "top-[0]" : null}`}
         >
           <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
@@ -52,7 +53,28 @@ const Navbar = () => {
               Home
             </RouterLink>
           </li>
-          <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
+          {location.pathname === '/student-portal' || location.pathname === '/staff-portal' ? (
+            <>
+            <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
+              <RouterLink onClick={() => setMenuShow(false)} to={'student-portal/eregistrar'} className={`hover:border-b-4 border-solid border-gold pb-1 hover:text-gold transition-colors duration-400 ease-linear ${location.pathname === "/student-portal/eregistrar" ? "border-b-4 border-solid border-gold" : ""} `}>E-Registrar</RouterLink>
+            </li>
+
+            <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
+              <RouterLink onClick={() => setMenuShow(false)} to={'student-portal/elearning'} className={`hover:border-b-4 border-solid border-gold pb-1 hover:text-gold transition-colors duration-400 ease-linear ${location.pathname === "/student-portal/elearning" ? "border-b-4 border-solid border-gold" : ""} `}>E-Learning</RouterLink>
+            </li>
+
+            <li className="nav-li pb-6 text-black nav-ul-md:text-black nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
+            <button
+              onClick={() => setMenuShow(false)}
+              className="cursor-pointer  p-2 px-4 bg-gold hover:bg-gold-fade text-base rounded-xl flex items-center gap-2 whitespace-nowrap transition-colors duration-500"
+            >
+              <span>Logout</span>
+            </button>
+          </li>
+            </>
+          ) :(
+            <>
+            <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
             {location.pathname === "/" ? (
               <ScrollLink to="school" spy={true} smooth={true} offset={100} onClick={() => setMenuShow(false)} className="cursor-pointer hover:border-b-4 border-solid border-gold pb-1 hover:text-gold transition-colors duration-400 ease-linear no-underline" >Schools</ScrollLink>
             ):(
@@ -129,6 +151,7 @@ const Navbar = () => {
                   <RouterLink
                     to={"student-email"}
                     className="whitespace-nowrap hover:text-white transition-all duration-300"
+                    onClick={() => setMenuShow(false)}
                   >
                     Request Student Email
                   </RouterLink>
@@ -191,8 +214,19 @@ const Navbar = () => {
               <img className="size-4" src={contact_icon} alt="" />
             </button>
           </li>
-        </div>
+            </>
+          )}
+          
+        </ul>
       </OutsideClickHandler>
+
+      {location.pathname === '/student-portal' ? (
+          <div className="relative">
+             <img src={profile} alt='' className="w-[40px] rounded-full"/>
+             <div className="absolute size-3 right-[-4px] bottom-[-2px] rounded-full bg-green"></div>
+          </div>
+         
+        ) : (null)}
 
       <div className="flex gap-4 pr-4 nav-ul-md:pr-0">
         <Search className="nav-icon size-6 cursor-pointer text-white" />
