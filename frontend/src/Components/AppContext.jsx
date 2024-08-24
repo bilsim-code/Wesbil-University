@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import PropTypes from 'prop-types'
 
 export const AppContext = createContext();
 
@@ -9,5 +10,9 @@ const ProviderFunction = (props) => {
   </AppContext.Provider>
   )
 };
+
+ProviderFunction.propTypes = {
+    children: PropTypes.node.isRequired,
+}
 
 export default ProviderFunction;
