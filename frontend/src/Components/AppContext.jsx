@@ -1,12 +1,13 @@
 import { createContext, useState } from "react";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { unitDetails } from "./UnitDetails";
 
 export const AppContext = createContext();
 
 const ProviderFunction = (props) => {
     const [sidebarOn, setSidebarOn] = useState(false);
   return (
-  <AppContext.Provider value={{sidebarOn, setSidebarOn}}>
+  <AppContext.Provider value={{sidebarOn, setSidebarOn, unitDetails}}>
     {props.children}
   </AppContext.Provider>
   )

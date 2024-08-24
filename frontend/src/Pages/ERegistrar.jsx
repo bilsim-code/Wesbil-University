@@ -10,24 +10,24 @@ import EregistrarHome from "../Components/EregistrarHome";
 const ERegistrar = () => {
   const [clickState, setClickState] = useState("profile");
   return (
-    <div className="mt-[66px] px-5 flex ">
+    <div className="mt-[66px] px-5 flex">
       <PortalSidebar setClickState={setClickState} clickState={clickState} />
       {/* second container */}
-      {clickState === "profile" ? (
-       <EregistrarHome/>
-      ) : clickState === 'timetable' ?  (
-        <MyTimetable />
-      ): clickState === 'units-registration' ? (
-        <UnitsRegistration/>
-      ): clickState === "exam-results" ? (
-        <ExamResults/>
-      ): clickState === "accomodation" ? (
-        <Accomodation/>
-      ): clickState === 'fees-statement' ?  (
-        <FeesStatement/>
-      ): (
-        null
-      )}
+      <div className="flex-1">
+        {clickState === "profile" ? (
+          <EregistrarHome />
+        ) : clickState === "timetable" ? (
+          <MyTimetable />
+        ) : clickState === "units-registration" ? (
+          <UnitsRegistration />
+        ) : clickState === "exam-results" ? (
+          <ExamResults />
+        ) : clickState === "accomodation" ? (
+          <Accomodation />
+        ) : clickState === "fees-statement" ? (
+          <FeesStatement />
+        ) : null}
+      </div>
     </div>
   );
 };
