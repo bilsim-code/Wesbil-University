@@ -9,8 +9,8 @@ import FeesStatement from "./FeesStatement";
 const ERegistrar = () => {
   const [clickState, setClickState] = useState("profile");
   return (
-    <div className="mt-[66px] px-5 flex gap-[4%]">
-      <PortalSidebar setClickState={setClickState} />
+    <div className="mt-[66px] px-5 flex ">
+      <PortalSidebar setClickState={setClickState} clickState={clickState} />
       {/* second container */}
       {clickState === "profile" ? (
         <div>

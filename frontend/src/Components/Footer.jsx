@@ -1,4 +1,4 @@
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 //import {Link as ScrollLink} from 'react-scroll';
 import footer_logo from "../assets/footer-logo.png";
 import {
@@ -11,7 +11,10 @@ import {
 import {  } from "react";
 
 const Footer = () => {
+  const location = useLocation();
   return (
+    <>
+    {location.pathname !== "/student-portal/eregistrar" && (
     <div className="bg-royalblue mt-20">
       {/* top */}
       <div className="p-6 grid grid-cols-1 grid-rows-4 text-white footer-md:grid-cols-4 footer-md:grid-rows-1">
@@ -114,6 +117,8 @@ const Footer = () => {
         </div>
       </footer>
     </div>
+  )}
+  </>
   );
 };
 

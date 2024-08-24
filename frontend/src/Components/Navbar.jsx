@@ -4,15 +4,17 @@ import logoImg from "../assets/wesbil_logo.png";
 import contact_icon from "../assets/contact.png";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Search, Menu, XOctagon, Home } from "react-feather";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import profile from '../assets/faculty1.jpg';
+import { AppContext } from "./AppContext";
 
 const Navbar = () => {
   const location = useLocation();
   const [LinkDropdownOn, setLinkDropdownOn] = useState(false);
   const [portalDropdownOn, setPortalDropdownOn] = useState(false);
   const [menuShow, setMenuShow] = useState(false);
+  const {setSidebarOn} = useContext(AppContext);
 
   const navRef = useRef();
 
@@ -34,7 +36,7 @@ const Navbar = () => {
     >
       {location.pathname === "/student-portal/eregistrar" ? (
         <div className="flex items-center gap-5">
-          <Home className="text-white cursor-pointer w-8 h-8"/>
+          <Home className="text-white cursor-pointer w-8 h-8" onClick={() => setSidebarOn(prev => !prev)}/>
           <span className="text-white font-medium text-lg max-400px:hidden">Wesbil University(E-Registrar)</span>
         </div>
       ) : (
