@@ -7,11 +7,11 @@ const UnitsRegistration = () => {
   const [registerChecked, setRegisterChecked] = useState(null);
 
   function handleRegister(index) {
-    if(index === null) {
-      setRegisterChecked(index)
+    if(registerChecked === index) {
+      setRegisterChecked(null)
     }
     else {
-      setRegisterChecked(null);
+      setRegisterChecked(index);
     }
   }
   return (
