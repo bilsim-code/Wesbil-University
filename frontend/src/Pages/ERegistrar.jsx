@@ -5,6 +5,7 @@ import UnitsRegistration from "./UnitsRegistration";
 import ExamResults from "./ExamResults";
 import Accomodation from "./Accomodation";
 import FeesStatement from "./FeesStatement";
+import EregistrarHome from "../Components/EregistrarHome";
 
 const ERegistrar = () => {
   const [clickState, setClickState] = useState("profile");
@@ -13,9 +14,7 @@ const ERegistrar = () => {
       <PortalSidebar setClickState={setClickState} clickState={clickState} />
       {/* second container */}
       {clickState === "profile" ? (
-        <div>
-          <p>Hi, my name is Bildad and I am happy to be here</p>
-        </div>
+       <EregistrarHome/>
       ) : clickState === 'timetable' ?  (
         <MyTimetable />
       ): clickState === 'units-registration' ? (
