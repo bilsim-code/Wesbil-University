@@ -1,4 +1,48 @@
-import profile from "../assets/program-icon-3.png";
+import { Link } from 'react-router-dom';
+import icon1 from '../assets/program-icon-1.png';
+import icon2 from '../assets/program-icon-3.png';
+import {FaBed, FaPen, FaBriefcase, } from 'react-icons/fa'
+import {BarChart, } from 'react-feather'
+import {XSquare} from 'react-feather'
+
+const PortalSidebar = () => {
+  return (
+    <div className='portal-sidebar '>
+      <XSquare className='absolute right-0 top-2 cursor-pointer hover:text-white'/>
+      <ul className="portal-sidebar-list">
+        <Link to={''} className='link'>
+        <img src={icon1} alt="" />
+        <span>Profile</span>
+        </Link>
+        <Link to={'courses'} className='link'>
+        <img src={icon2} alt="" />
+        <span>Courses</span>
+        </Link>
+        <Link className='link'>
+        <BarChart/>
+        <span>Student Progression</span>
+        </Link>
+        <Link className='link'>
+        <FaPen/>
+        <span>Examination</span>
+        </Link>
+        <Link className="link">
+        <FaBriefcase/>
+        <span>Finance</span>
+        </Link>
+        <Link className="link">
+        <FaBed/>
+        <span>Accomodation</span>
+        </Link>
+      </ul>
+    </div>
+  )
+}
+
+export default PortalSidebar
+
+
+/* import profile from "../assets/program-icon-3.png";
 import {
   FaCalendarCheck,
   FaPencilAlt,
@@ -87,3 +131,4 @@ const PortalSidebar = ({ setClickState, clickState }) => {
 };
 
 export default PortalSidebar;
+ */

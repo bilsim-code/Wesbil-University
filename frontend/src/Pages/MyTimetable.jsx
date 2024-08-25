@@ -2,7 +2,7 @@
 
 const MyTimetable = () => {
   return (
-    <div>MyTimetable</div>
+    <div></div>
   )
 }
 

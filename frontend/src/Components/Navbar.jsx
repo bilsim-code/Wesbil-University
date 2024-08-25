@@ -36,8 +36,7 @@ const Navbar = () => {
     >
       {location.pathname === "/student-portal/eregistrar" ? (
         <div className="flex items-center gap-5">
-          <Home className="text-white cursor-pointer w-8 h-8" onClick={() => setSidebarOn(prev => !prev)}/>
-          <span className="text-white font-medium text-lg max-400px:hidden">Wesbil University(E-Registrar)</span>
+          <Home className="text-white cursor-pointer w-6 h-8" onClick={() => setSidebarOn(prev => !prev)}/>
         </div>
       ) : (
              <RouterLink to={"/"}>
@@ -248,7 +247,10 @@ const Navbar = () => {
         ) : (null)}
 
       <div className="flex gap-4 pr-4 nav-ul-md:pr-0">
+      {!(location.pathname === "/student-portal" || location.pathname === '/staff-portal' || location.pathname === '/student-portal/elearning' || location.pathname === '/student-portal/eregistrar' ) && (
         <Search className="nav-icon size-6 cursor-pointer text-white" />
+      )}
+        
         {menuShow ? (
           <XOctagon
             className="nav-icon size-6 text-white cursor-pointer z-50 nav-ul-md:hidden"
