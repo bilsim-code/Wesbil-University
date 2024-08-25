@@ -5,14 +5,28 @@ import {Check} from 'react-feather'
 const UnitsRegistration = () => {
   const {unitDetails} = useContext(AppContext);
   const [registerChecked, setRegisterChecked] = useState(null);
+  const [multiSelection, setMultiSelection] = useState(false)
+  const [multiple, setMultiple] = useState([]);
 
-  function handleRegister(index) {
-    if(registerChecked === index) {
+/*   function handleRegister(id) {
+    if(registerChecked === id) {
       setRegisterChecked(null)
     }
     else {
-      setRegisterChecked(index);
+      setRegisterChecked(id);
     }
+  } */
+
+  function handleMultipleSelection(id) {
+    let copyMultiple = [...multiple];
+    let indexOfCurrentId = copyMultiple.indexOf(id);
+    if(indexOfCurrentId === -1) {
+      copyMultiple.push(id);
+    }
+    else {
+      copyMultiple.splice(indexOfCurrentId, 1);
+    }
+    setMultiple(copyMultiple);
   }
   return (
     <div className="">
@@ -31,7 +45,7 @@ const UnitsRegistration = () => {
       <div key={index} className="grid grid-cols-4 place-items-center border-b py-4 mb-3 max-430px:grid-cols-3 max-430px:grid-rows-2 font-semibold">
       <p className="">{item.name}</p>
       <p>{item.code}</p>
-      <p className="bg-gold p-2 rounded-md cursor-pointer text-royalblue hover:bg-gold-fade" onClick={() => handleRegister(index)}>{registerChecked === index ? <Check/> : "Register"}</p>
+      <p className="bg-gold p-2 rounded-md cursor-pointer text-royalblue hover:bg-gold-fade" onClick={() => handleMultipleSelection(item._id)}>{multiple.indexOf(item._id) !== -1 ? <Check/> : "Register"}</p>
       <p className="bg-gold p-2 rounded-md cursor-pointer text-red hover:bg-gold-fade">Drop</p>
       </div>
     ))}
