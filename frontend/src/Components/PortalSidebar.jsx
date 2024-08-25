@@ -19,7 +19,7 @@ const PortalSidebar = ({ setClickState, clickState }) => {
   return (
     <OutsideClickHandler onOutsideClick={() => setSidebarOn(false)}>
       <div
-        className={`relative w-[400px] min-h-screen overflow-y-auto  max-test-lg:w-[350px] max-w-[80%] pt-20 border-r-2   transition-all duration-1000 bg-white z-10 ${sidebarOn ? "block" : "hidden"} max-footer-md:fixed max-footer-md:top-0 max-footer-md:bottom-0 max-footer-md:left-0 max-600px:pt-20`}
+        className={`relative w-[400px] h-screen overflow-y-hidden  max-test-lg:w-[350px] max-w-[80%] pt-20 border-r-2   transition-all duration-1000 bg-white z-10 ${sidebarOn ? "block" : "hidden"} max-footer-md:fixed max-footer-md:top-0 max-footer-md:bottom-0 max-footer-md:left-0 max-600px:pt-20`}
       > <BiX
             className="absolute right-4 top-2 size-8 cursor-pointer max-footer-md:top-auto z-50"
             onClick={() => setSidebarOn(false)}
@@ -43,70 +43,29 @@ const PortalSidebar = ({ setClickState, clickState }) => {
           <ul className="list-none grid grid-cols-1 mt-10 gap-10">
             <div
               onClick={() => setClickState("timetable")}
-              className={`flex items-center text-royalblue font-medium  rounded-l-xl text-xl max-footer-md:rounded-l-none cursor-pointer hover:text-black transition-all ${clickState === "timetable" ? "bg-gold" : ""}`}
+              className={`flex items-center text-royalblue font-medium p-4  rounded-l-xl text-xl max-footer-md:rounded-l-none cursor-pointer hover:text-black transition-all ${clickState === "timetable" ? "bg-gold" : ""}`}
             >
               <FaCalendarCheck className="w-10" />
               <span className="pl-2 whitespace-nowrap">My Timetable</span>
             </div>
             <div
               onClick={() => setClickState("units-registration")}
-              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
+              className={`flex items-center text-royalblue font-medium p-4 text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
             >
               <FaPencilAlt className="w-10" />
               <span className="whitespace-nowrap pl-2">Units Registration</span>
             </div>
-            <div
-              onClick={() => setClickState("units-registration")}
-              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
-            >
-              <FaPencilAlt className="w-10" />
-              <span className="whitespace-nowrap pl-2">Units Registration</span>
-            </div>
-            <div
-              onClick={() => setClickState("units-registration")}
-              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
-            >
-              <FaPencilAlt className="w-10" />
-              <span className="whitespace-nowrap pl-2">Units Registration</span>
-            </div>
-            <div
-              onClick={() => setClickState("units-registration")}
-              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
-            >
-              <FaPencilAlt className="w-10" />
-              <span className="whitespace-nowrap pl-2">Units Registration</span>
-            </div>
-            <div
-              onClick={() => setClickState("units-registration")}
-              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
-            >
-              <FaPencilAlt className="w-10" />
-              <span className="whitespace-nowrap pl-2">Units Registration</span>
-            </div>
-            <div
-              onClick={() => setClickState("units-registration")}
-              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
-            >
-              <FaPencilAlt className="w-10" />
-              <span className="whitespace-nowrap pl-2">Units Registration</span>
-            </div>
-            <div
-              onClick={() => setClickState("units-registration")}
-              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
-            >
-              <FaPencilAlt className="w-10" />
-              <span className="whitespace-nowrap pl-2">Units Registration</span>
-            </div>
+       
             <div
               onClick={() => setClickState("exam-results")}
-              className={`flex items-center text-royalblue font-medium rounded-l-xl max-footer-md:rounded-l-none text-xl cursor-pointer hover:text-black transition-all ${clickState === "exam-results" ? "bg-gold" : ""}`}
+              className={`flex items-center text-royalblue font-medium p-4 rounded-l-xl max-footer-md:rounded-l-none text-xl cursor-pointer hover:text-black transition-all ${clickState === "exam-results" ? "bg-gold" : ""}`}
             >
               <FaBookReader className="w-10" />
               <span className="whitespace-nowrap pl-2">Exam Results</span>
             </div>
             <div
               onClick={() => setClickState("fees-statement")}
-              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "fees-statement" ? "bg-gold" : ""}`}
+              className={`flex items-center text-royalblue font-medium p-4 text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "fees-statement" ? "bg-gold" : ""}`}
             >
               <FaReceipt className="w-10" />
               <span className="whitespace-nowrap pl-2">Fees Statement</span>
