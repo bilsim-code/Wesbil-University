@@ -19,7 +19,7 @@ const PortalSidebar = ({ setClickState, clickState }) => {
   return (
     <OutsideClickHandler onOutsideClick={() => setSidebarOn(false)}>
       <div
-        className={`w-[400px] min-h-[100vh]  max-test-lg:w-[350px] max-w-[80%] pt-20 border-r-2 relative  transition-all duration-1000 bg-white z-10 ${sidebarOn ? "block" : "hidden"} max-footer-md:absolute max-footer-md:top-0 max-footer-md:bottom-0 max-footer-md:left-0 max-600px:pt-20`}
+        className={`relative w-[400px] min-h-screen overflow-y-auto  max-test-lg:w-[350px] max-w-[80%] pt-20 border-r-2   transition-all duration-1000 bg-white z-10 ${sidebarOn ? "block" : "hidden"} max-footer-md:fixed max-footer-md:top-0 max-footer-md:bottom-0 max-footer-md:left-0 max-600px:pt-20`}
       > <BiX
             className="absolute right-4 top-2 size-8 cursor-pointer max-footer-md:top-auto z-50"
             onClick={() => setSidebarOn(false)}
@@ -47,6 +47,48 @@ const PortalSidebar = ({ setClickState, clickState }) => {
             >
               <FaCalendarCheck className="w-10" />
               <span className="pl-2 whitespace-nowrap">My Timetable</span>
+            </div>
+            <div
+              onClick={() => setClickState("units-registration")}
+              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
+            >
+              <FaPencilAlt className="w-10" />
+              <span className="whitespace-nowrap pl-2">Units Registration</span>
+            </div>
+            <div
+              onClick={() => setClickState("units-registration")}
+              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
+            >
+              <FaPencilAlt className="w-10" />
+              <span className="whitespace-nowrap pl-2">Units Registration</span>
+            </div>
+            <div
+              onClick={() => setClickState("units-registration")}
+              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
+            >
+              <FaPencilAlt className="w-10" />
+              <span className="whitespace-nowrap pl-2">Units Registration</span>
+            </div>
+            <div
+              onClick={() => setClickState("units-registration")}
+              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
+            >
+              <FaPencilAlt className="w-10" />
+              <span className="whitespace-nowrap pl-2">Units Registration</span>
+            </div>
+            <div
+              onClick={() => setClickState("units-registration")}
+              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
+            >
+              <FaPencilAlt className="w-10" />
+              <span className="whitespace-nowrap pl-2">Units Registration</span>
+            </div>
+            <div
+              onClick={() => setClickState("units-registration")}
+              className={`flex items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
+            >
+              <FaPencilAlt className="w-10" />
+              <span className="whitespace-nowrap pl-2">Units Registration</span>
             </div>
             <div
               onClick={() => setClickState("units-registration")}

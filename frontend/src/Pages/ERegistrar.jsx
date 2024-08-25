@@ -10,7 +10,7 @@ import EregistrarHome from "../Components/EregistrarHome";
 const ERegistrar = () => {
   const [clickState, setClickState] = useState("profile");
   return (
-    <div className="mt-[66px] px-5 flex">
+    <div className="mt-[66px] px-5 flex min-h-screen">
       <PortalSidebar setClickState={setClickState} clickState={clickState} />
       {/* second container */}
       <div className="flex-1">

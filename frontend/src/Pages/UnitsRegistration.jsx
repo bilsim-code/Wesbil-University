@@ -1,11 +1,11 @@
 import { useContext, useState } from "react"
 import { AppContext } from "../Components/AppContext"
-import {Check} from 'react-feather'
+import {Check, X} from 'react-feather'
 
 const UnitsRegistration = () => {
   const {unitDetails} = useContext(AppContext);
-  const [registerChecked, setRegisterChecked] = useState(null);
-  const [multiSelection, setMultiSelection] = useState(false)
+  //const [registerChecked, setRegisterChecked] = useState(null);
+  //const [multiSelection, setMultiSelection] = useState(false)
   const [multiple, setMultiple] = useState([]);
 
 /*   function handleRegister(id) {
@@ -27,6 +27,7 @@ const UnitsRegistration = () => {
       copyMultiple.splice(indexOfCurrentId, 1);
     }
     setMultiple(copyMultiple);
+    console.log(multiple)
   }
   return (
     <div className="">
@@ -46,7 +47,7 @@ const UnitsRegistration = () => {
       <p className="">{item.name}</p>
       <p>{item.code}</p>
       <p className="bg-gold p-2 rounded-md cursor-pointer text-royalblue hover:bg-gold-fade" onClick={() => handleMultipleSelection(item._id)}>{multiple.indexOf(item._id) !== -1 ? <Check/> : "Register"}</p>
-      <p className="bg-gold p-2 rounded-md cursor-pointer text-red hover:bg-gold-fade">Drop</p>
+      <p className="bg-gold p-2 rounded-md cursor-pointer text-red hover:bg-gold-fade" onClick={() => handleMultipleSelection(item._id)}>{multiple.indexOf(item._id) !== -1 ? "Drop" : <X/>}</p>
       </div>
     ))}
 
