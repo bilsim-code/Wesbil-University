@@ -152,3 +152,12 @@
 .portal-sidebar::-webkit-scrollbar-track-piece {
     background: royalblue;
 }
+
+.profile-ul {
+    display: none;
+}
+
+.profile-body:hover .profile-ul {
+    display: block;
+}
+

@@ -6,7 +6,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Search, Menu, XOctagon, Home, List } from "react-feather";
 import { useContext, useEffect, useRef, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
-import profile from "../assets/faculty1.jpg";
+import profile from "../assets/student-profile.png";
 import { AppContext } from "./AppContext";
 
 const Navbar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 overflow-hidden ${location.pathname === "/courses" || location.pathname === "/research" || location.pathname === "/mylibrary" || location.pathname === "/student-portal" || location.pathname === "/staff-portal" || location.pathname === "/student-portal/elearning" || location.pathname === "/student-portal/eregistrar" || location.pathname === "/student-portal/eregistrar/courses/" || location.pathname === "/student-portal/eregistrar/student-progresssion" || location.pathname === "/student-portal/eregistrar/examination" || location.pathname === "/student-portal/eregistrar/accomodation" || location.pathname === "/student-portal/eregistrar/course-transfers" || location.pathname === "/student-portal/eregistrar/student-progression" || location.pathname === "/student-portal/eregistrar/examination" || location.pathname === "/student-portal/eregistrar/finance" || location.pathname === "/student-portal/eregistrar/accomodation" || location.pathname === "/student-portal/eregistrar/readmission" || location.pathname === "/student-portal/eregistrar/semregister" || location.pathname === "/student-portal/eregistrar/retakes" || location.pathname === "/student-portal/eregistrar/examresults" || location.pathname === "/student-portal/eregistrar/feestatement" || location.pathname === "/student-portal/eregistrar/hostel" || location.pathname === "/student-portal/eregistrar/profile" || location.pathname === "/student-portal/eregistrar/profile/change-password" ? "bg-black" : ""}`}
+      className={`navbar flex justify-between px-4 pt-3 nav-ul-md:justify-around transition-all duration-1000 nav-ul-md:px-0 items-center  pb-3 pr-0 fixed right-0 left-0 top-0 z-50 ${location.pathname === "/courses" || location.pathname === "/research" || location.pathname === "/mylibrary" || location.pathname === "/student-portal" || location.pathname === "/staff-portal" || location.pathname === "/student-portal/elearning" || location.pathname === "/student-portal/eregistrar" || location.pathname === "/student-portal/eregistrar/courses/" || location.pathname === "/student-portal/eregistrar/student-progresssion" || location.pathname === "/student-portal/eregistrar/examination" || location.pathname === "/student-portal/eregistrar/accomodation" || location.pathname === "/student-portal/eregistrar/course-transfers" || location.pathname === "/student-portal/eregistrar/student-progression" || location.pathname === "/student-portal/eregistrar/examination" || location.pathname === "/student-portal/eregistrar/finance" || location.pathname === "/student-portal/eregistrar/accomodation" || location.pathname === "/student-portal/eregistrar/readmission" || location.pathname === "/student-portal/eregistrar/semregister" || location.pathname === "/student-portal/eregistrar/retakes" || location.pathname === "/student-portal/eregistrar/examresults" || location.pathname === "/student-portal/eregistrar/feestatement" || location.pathname === "/student-portal/eregistrar/hostel" || location.pathname === "/student-portal/eregistrar/profile" || location.pathname === "/student-portal/eregistrar/profile/change-password" ? "bg-black" : ""}`}
     >
       {location.pathname === "/student-portal/eregistrar" ||
       location.pathname === "/student-portal/eregistrar/courses/" ||
@@ -65,10 +65,12 @@ const Navbar = () => {
               onClick={() => setSidebarOn((prev) => !prev)}
             />
           </div>
-          {!sidebarOpen &&   <div className="text-white max-270px:absolute left-[50%]">
-            <List role="button" onClick={() => setSidebarOpen(!sidebarOpen)}/>
-          </div>}
-        
+            <div className={`text-white max-270px:absolute left-[40%] ${!sidebarOpen ? 'visible' : "invisible" }`}>
+              <List
+                role="button"
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+              />
+            </div>
         </>
       ) : (
         <RouterLink to={"/"}>
@@ -127,14 +129,14 @@ const Navbar = () => {
                 </RouterLink>
               </li>
 
-              <li className="nav-li pb-6 text-black nav-ul-md:text-black nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
+              {/* <li className="nav-li pb-6 text-black nav-ul-md:text-black nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
                 <button
                   onClick={() => setMenuShow(false)}
                   className="cursor-pointer  p-2 px-4 bg-gold hover:bg-gold-fade text-base rounded-xl flex items-center gap-2 whitespace-nowrap transition-colors duration-500"
                 >
                   <span>Logout</span>
                 </button>
-              </li>
+              </li> */}
             </>
           ) : (
             <>
@@ -302,10 +304,37 @@ const Navbar = () => {
         </ul>
       </OutsideClickHandler>
 
-      {location.pathname === "/student-portal" ? (
-        <div className="relative">
-          <img src={profile} alt="" className="w-[40px] rounded-full" />
-          <div className="absolute size-3 right-[-4px] bottom-[-2px] rounded-full bg-green"></div>
+      {location.pathname === "/student-portal" ||
+      location.pathname === "/staff-portal" ||
+      location.pathname === "/student-portal/elearning" ||
+      location.pathname === "/student-portal/eregistrar" ||
+      location.pathname === "/student-portal/eregistrar/courses/" ||
+      location.pathname === "/student-portal/eregistrar/student-progresssion" ||
+      location.pathname === "/student-portal/eregistrar/examination" ||
+      location.pathname === "/student-portal/eregistrar/accomodation" ||
+      location.pathname === "/student-portal/eregistrar/course-transfers" ||
+      location.pathname === "/student-portal/eregistrar/student-progression" ||
+      location.pathname === "/student-portal/eregistrar/examination" ||
+      location.pathname === "/student-portal/eregistrar/finance" ||
+      location.pathname === "/student-portal/eregistrar/accomodation" ||
+      location.pathname === "/student-portal/eregistrar/readmission" ||
+      location.pathname === "/student-portal/eregistrar/semregister" ||
+      location.pathname === "/student-portal/eregistrar/retakes" ||
+      location.pathname === "/student-portal/eregistrar/examresults" ||
+      location.pathname === "/student-portal/eregistrar/feestatement" ||
+      location.pathname === "/student-portal/eregistrar/hostel" ||
+      location.pathname === "/student-portal/eregistrar/profile" ||
+      location.pathname ===
+        "/student-portal/eregistrar/profile/change-password" ? (
+        <div className="relative profile-body">
+          <img src={profile} alt="" className="w-[30px] rounded-full" role="button" />
+          <div className="absolute size-2.5 right-[-4px] bottom-[2px] rounded-full bg-green"></div>
+          <ul className="absolute right-0 bg-white rounded shadow-lg p-4 profile-ul">
+            <li className="whitespace-nowrap font-semibold capitalize text-lg pb-2 mb-2 border-b ">
+              I am who I am
+            </li>
+            <li className="bg-gray-fade rounded shadow-sm shadow-royalblue font-medium hover:bg-red transition-all ease-linear duration-750 w-fit p-2" role="button">Logout</li>
+          </ul>
         </div>
       ) : null}
 
@@ -314,8 +343,30 @@ const Navbar = () => {
           location.pathname === "/student-portal" ||
           location.pathname === "/staff-portal" ||
           location.pathname === "/student-portal/elearning" ||
-          location.pathname === "/student-portal/eregistrar"
-        ) && <Search className="nav-icon size-6 cursor-pointer text-white max-270px:hidden" />}
+          location.pathname === "/student-portal/eregistrar" ||
+          location.pathname === "/student-portal/eregistrar/courses/" ||
+          location.pathname ===
+            "/student-portal/eregistrar/student-progresssion" ||
+          location.pathname === "/student-portal/eregistrar/examination" ||
+          location.pathname === "/student-portal/eregistrar/accomodation" ||
+          location.pathname === "/student-portal/eregistrar/course-transfers" ||
+          location.pathname ===
+            "/student-portal/eregistrar/student-progression" ||
+          location.pathname === "/student-portal/eregistrar/examination" ||
+          location.pathname === "/student-portal/eregistrar/finance" ||
+          location.pathname === "/student-portal/eregistrar/accomodation" ||
+          location.pathname === "/student-portal/eregistrar/readmission" ||
+          location.pathname === "/student-portal/eregistrar/semregister" ||
+          location.pathname === "/student-portal/eregistrar/retakes" ||
+          location.pathname === "/student-portal/eregistrar/examresults" ||
+          location.pathname === "/student-portal/eregistrar/feestatement" ||
+          location.pathname === "/student-portal/eregistrar/hostel" ||
+          location.pathname === "/student-portal/eregistrar/profile" ||
+          location.pathname ===
+            "/student-portal/eregistrar/profile/change-password"
+        ) && (
+          <Search className="nav-icon size-6 cursor-pointer text-white max-270px:hidden" />
+        )}
 
         {menuShow ? (
           <XOctagon
