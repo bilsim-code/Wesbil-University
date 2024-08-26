@@ -10,15 +10,15 @@ const PortalSidebar = () => {
     <div className='portal-sidebar '>
       <XSquare className='absolute right-0 top-2 cursor-pointer hover:text-white'/>
       <ul className="portal-sidebar-list">
-        <Link to={''} className='link'>
+        <Link to={'/student-portal/eregistrar/'} className='link'>
         <img src={icon1} alt="" />
         <span>Profile</span>
         </Link>
-        <Link to={'courses'} className='link'>
+        <Link to={'/student-portal/eregistrar/courses/'} className='link'>
         <img src={icon2} alt="" />
         <span>Courses</span>
         </Link>
-        <Link className='link'>
+        <Link to={'/student-portal/eregistrar/mytimetable'} className='link'>
         <BarChart/>
         <span>Student Progression</span>
         </Link>

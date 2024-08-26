@@ -1,21 +1,26 @@
-import PortalSidebar from "../Components/PortalSidebar"
-import {Routes, Route} from 'react-router-dom';
-import MyTimeTable from '../Pages/MyTimetable'
+import PortalSidebar from "../Components/PortalSidebar";
+import { Routes, Route } from "react-router-dom";
+import MyTimeTable from "../Pages/MyTimetable";
+import Profile from "./Profile";
+import MyCourses from "./MyCourses";
+
 
 const ERegistrar = () => {
   return (
     <div className="e-registrar">
-      <PortalSidebar/> 
-      <Routes>
-        <Route path="/courses" element={<MyTimeTable/>} />
-      </Routes>
+      <PortalSidebar />
+      <div className="sidebar-routes flex ml-[250px] p-5">
+        <Routes>
+          <Route path="/" element={<Profile />} />
+          <Route path="/courses" element={<MyCourses/>} />
+          <Route path="/mytimetable" element={<MyTimeTable/>} />
+        </Routes>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ERegistrar
-
-
+export default ERegistrar;
 
 /* import PortalSidebar from "../Components/PortalSidebar";
 import { useState } from "react";
