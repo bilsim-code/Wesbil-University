@@ -60,11 +60,17 @@
     background: goldenrod;
     min-height: 100vh;
     overflow-y: auto;
-    width: 300px;
+    width: 80px;
+    max-width: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
     z-index: 50;
+    transition: all .5s;
+}
+
+.portal-sidebar.open {
+    width: 300px
 }
 
 .portal-sidebar-list {
@@ -96,6 +102,14 @@
     transition: all .6s;
 }
 
+.portal-sidebar:not(.open) .dropdown-span {
+    display: none;
+}
+
+.portal-sidebar:not(.open) .chevron {
+    display: none;
+}
+
 .portal-sidebar-list .dropdown-header:hover span{
     color: rgba(0, 0, 0, 0.3); 
 }
@@ -104,11 +118,19 @@
     width: 20px;
 }
 
+.portal-sidebar:not(.open) .portal-sidebar-list img {
+    width: 30px;
+}
+
 .portal-sidebar-list svg {
     width: 18px;
     height: 20px;
     margin-right: 10px;
     color: #dbdbdb;
+}
+
+.portal-sidebar:not(.open) .portal-sidebar-list .svg {
+    width: 30px;
 }
 
 .portal-sidebar::-webkit-scrollbar {

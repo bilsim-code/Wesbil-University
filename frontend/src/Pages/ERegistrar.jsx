@@ -15,9 +15,9 @@ import ChangePassword from "./ChangePassword";
 
 const ERegistrar = () => {
   return (
-    <div className="e-registrar">
-      <PortalSidebar />
-      <div className="sidebar-routes flex ml-[250px] p-5">
+    <div className="e-registrar ">
+      <PortalSidebar  />
+      <div className="sidebar-routes p-5 ml-20">
         <Routes>
           <Route path="/" element={<StudentQuickLinks />} />
           <Route path="/courses" element={<MyCourses/>} />

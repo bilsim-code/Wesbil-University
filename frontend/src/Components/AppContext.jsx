@@ -6,8 +6,9 @@ export const AppContext = createContext();
 
 const ProviderFunction = (props) => {
     const [sidebarOn, setSidebarOn] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-  <AppContext.Provider value={{sidebarOn, setSidebarOn, unitDetails}}>
+  <AppContext.Provider value={{sidebarOn, setSidebarOn, sidebarOpen, setSidebarOpen, unitDetails}}>
     {props.children}
   </AppContext.Provider>
   )
