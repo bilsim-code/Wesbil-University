@@ -19,7 +19,7 @@ const Testimonials = () => {
       <div className="grid grid-cols-1 480px:grid-cols-2 nav-ul-md:grid-rows-1 nav-ul-md:grid-cols-4 p-4 gap-4 px-10 my-20">
         {testimonialContent.map((item, index) => (
             <div key={index}>
-            <OutsideClickHandler onOutsideClick={() => setActiveIndex(null)}>
+            <OutsideClickHandler onOutsideClick={() => setActiveIndex(null)}>                    
           <div
             style={{ backgroundImage: `url(${item.image})` }}
             className={` bg-no-repeat bg-cover bg-center h-64 relative flex items-center justify-center rounded-md shadow-md hover:scale-[1.05] hover:overflow-hidden transition-all duration-500 ${activeIndex === index && "h-[74vh] test-xl:h-[70vh] test-lg:h-[60vh] 480px:h-[78vh] test-md:h-[60vh] test-sm:h-[94vh] nav-ul-md:h-[78vh]"}`}
