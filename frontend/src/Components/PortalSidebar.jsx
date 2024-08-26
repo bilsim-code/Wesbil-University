@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronDown } from "react-feather";
 import { XSquare } from "react-feather";
 import { useContext, useState } from "react";
 import { AppContext } from "./AppContext";
+import OutsideClickHandler from "react-outside-click-handler";
 
 const PortalSidebar = () => {
   const [dropdownOn, setDropdownOn] = useState(null);
@@ -16,13 +17,14 @@ const PortalSidebar = () => {
   }
 
   return (
+    <OutsideClickHandler onOutsideClick={() => setSidebarOpen(false)}>
     <div className={`portal-sidebar ${sidebarOpen ? 'open' : ""}`}>
       {sidebarOpen ? (
         <XSquare onClick={() => setSidebarOpen(!sidebarOpen)} className=" xsquare absolute right-0 top-4 cursor-pointer hover:text-white size-10" />
       ): null}
       
       <ul className="portal-sidebar-list">
-        <Link to={"/student-portal/eregistrar"} className="link cursor-pointer">
+        <Link to={"/student-portal/eregistrar"} className={`link cursor-pointer ${location.pathname === "/student-portal/eregistrar" ? "bg-black-fade" : ""}`}>
           <div className="dropdown-header">
             <FaLink />
             <span className="dropdown-span">Quick Links</span>
@@ -148,6 +150,7 @@ const PortalSidebar = () => {
         </div>
       </ul>
     </div>
+    </OutsideClickHandler>
   );
 };
 
