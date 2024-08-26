@@ -1,9 +1,16 @@
 import PortalSidebar from "../Components/PortalSidebar";
 import { Routes, Route } from "react-router-dom";
-import MyTimeTable from "../Pages/MyTimetable";
 import MyCourses from "./MyCourses";
 import StudentQuickLinks from "./StudentQuickLinks";
 import CourseTransfers from "./CourseTransfers";
+import Readmission from "./Readmission";
+import SemRegister from "./SemRegister";
+import Retakes from "./Retakes";
+import ExamResults from "./ExamResults";
+import FeesStatement from "./FeesStatement";
+import Hostel from "./Hostel";
+import Profile from './Profile'
+import ChangePassword from "./ChangePassword";
 
 
 const ERegistrar = () => {
@@ -14,9 +21,17 @@ const ERegistrar = () => {
         <Routes>
           <Route path="/" element={<StudentQuickLinks />} />
           <Route path="/courses" element={<MyCourses/>} />
-          <Route path="/mytimetable" element={<MyTimeTable/>} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/course-transfers" element={<CourseTransfers/>} />
+          <Route path="/readmission" element={<Readmission/>} />
+          <Route path="/semregister" element={<SemRegister/>} />
+          <Route path="/retakes" element={<Retakes/>} />
+          <Route path="/examresults" element={<ExamResults/>} />
+          <Route path="/feestatement" element={<FeesStatement/>} />
+          <Route path="/hostel" element={<Hostel/>} />
+          <Route path="/profile/change-password" element={<ChangePassword/>} />
         </Routes>
+        
       </div>
     </div>
   );

@@ -62,13 +62,13 @@ const PortalSidebar = () => {
           </div>
           {dropdownOn === "progression" ? (
             <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
-              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+              <Link to={'/student-portal/eregistrar/semregister'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Semester Registration
               </Link>
-              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+              <Link to={'/student-portal/eregistrar/readmission'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Readmission
               </Link>
-              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+              <Link to={'/student-portal/eregistrar/retakes'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Retakes
               </Link>
             </div>
@@ -84,7 +84,7 @@ const PortalSidebar = () => {
           </div>
           {dropdownOn === "exams" ? (
             <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
-              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+              <Link to={'/student-portal/eregistrar/examresults'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Exam Results
               </Link>
             </div>
@@ -100,7 +100,7 @@ const PortalSidebar = () => {
           </div>
           {dropdownOn === 'finance' ? (
             <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
-              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+              <Link to={'/student-portal/eregistrar/feestatement'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Fee Statement
               </Link>
             </div>
@@ -116,7 +116,7 @@ const PortalSidebar = () => {
           </div>
           {dropdownOn === 'accomodation' ? (
             <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
-              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+              <Link to={'/student-portal/eregistrar/hostel'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 View/Book Hostel
               </Link>
             </div>
@@ -132,10 +132,10 @@ const PortalSidebar = () => {
           </div>
           {dropdownOn === 'profile' ? (
             <div className="dropdown-content bg-black-fade flex flex-col px-[60px] mb-4">
-              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+              <Link to={'/student-portal/eregistrar/profile'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 View Profile
               </Link>
-              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+              <Link to={'/student-portal/eregistrar/profile/change-password'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Change Password
               </Link>
             </div>
