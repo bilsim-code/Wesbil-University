@@ -1,8 +1,9 @@
 import PortalSidebar from "../Components/PortalSidebar";
 import { Routes, Route } from "react-router-dom";
 import MyTimeTable from "../Pages/MyTimetable";
-import Profile from "./Profile";
 import MyCourses from "./MyCourses";
+import StudentQuickLinks from "./StudentQuickLinks";
+import CourseTransfers from "./CourseTransfers";
 
 
 const ERegistrar = () => {
@@ -11,9 +12,10 @@ const ERegistrar = () => {
       <PortalSidebar />
       <div className="sidebar-routes flex ml-[250px] p-5">
         <Routes>
-          <Route path="/" element={<Profile />} />
+          <Route path="/" element={<StudentQuickLinks />} />
           <Route path="/courses" element={<MyCourses/>} />
           <Route path="/mytimetable" element={<MyTimeTable/>} />
+          <Route path="/course-transfers" element={<CourseTransfers/>} />
         </Routes>
       </div>
     </div>

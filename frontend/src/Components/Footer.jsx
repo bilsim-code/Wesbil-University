@@ -14,7 +14,7 @@ const Footer = () => {
   const location = useLocation();
   return (
     <>
-    {location.pathname !== "/student-portal/eregistrar" && (
+    {!(location.pathname === "/student-portal/eregistrar" || location.pathname === '/student-portal/eregistrar/courses/' || location.pathname === '/student-portal/eregistrar/student-progression' || location.pathname === '/student-portal/eregistrar/examination' || location.pathname === '/student-portal/eregistrar/finance' || location.pathname === '/student-portal/eregistrar/accomodation' || location.pathname === '/student-portal/eregistrar/course-transfers') && (
     <div className="bg-royalblue mt-20">
       {/* top */}
       <div className="p-6 grid grid-cols-1 grid-rows-4 text-white footer-md:grid-cols-4 footer-md:grid-rows-1">

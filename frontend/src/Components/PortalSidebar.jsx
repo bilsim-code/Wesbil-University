@@ -1,134 +1,149 @@
-import { Link } from 'react-router-dom';
-import icon1 from '../assets/program-icon-1.png';
-import icon2 from '../assets/program-icon-3.png';
-import {FaBed, FaPen, FaBriefcase, } from 'react-icons/fa'
-import {BarChart, } from 'react-feather'
-import {XSquare} from 'react-feather'
+import { Link } from "react-router-dom";
+import icon1 from "../assets/program-icon-1.png";
+import icon2 from "../assets/program-icon-3.png";
+import { FaBed, FaPen, FaBriefcase, FaLink, FaChartLine } from "react-icons/fa";
+import { ChevronLeft, ChevronDown } from "react-feather";
+import { XSquare } from "react-feather";
+import { useState } from "react";
 
 const PortalSidebar = () => {
+  const [dropdownOn, setDropdownOn] = useState(null);
+
+  function handleDropdown(value) {
+    setDropdownOn((dropdownOn) => (dropdownOn === value ? null : value));
+  }
+
   return (
-    <div className='portal-sidebar '>
-      <XSquare className='absolute right-0 top-2 cursor-pointer hover:text-white'/>
+    <div className="portal-sidebar">
+      <XSquare className="absolute right-0 top-2 cursor-pointer hover:text-white" />
       <ul className="portal-sidebar-list">
-        <Link to={'/student-portal/eregistrar/'} className='link'>
-        <img src={icon1} alt="" />
-        <span>Profile</span>
+        <Link to={"/student-portal/eregistrar"} className="link cursor-pointer">
+          <div className="dropdown-header">
+            <FaLink />
+            <span className="dropdown-span">Quick Links</span>
+          </div>
         </Link>
-        <Link to={'/student-portal/eregistrar/courses/'} className='link'>
-        <img src={icon2} alt="" />
-        <span>Courses</span>
-        </Link>
-        <Link to={'/student-portal/eregistrar/mytimetable'} className='link'>
-        <BarChart/>
-        <span>Student Progression</span>
-        </Link>
-        <Link className='link'>
-        <FaPen/>
-        <span>Examination</span>
-        </Link>
-        <Link className="link">
-        <FaBriefcase/>
-        <span>Finance</span>
-        </Link>
-        <Link className="link">
-        <FaBed/>
-        <span>Accomodation</span>
-        </Link>
+        <div className="link cursor-pointer">
+          <div
+            className="flex items-center justify-between dropdown-main"
+            onClick={() => handleDropdown("courses")}
+          >
+            <div className="dropdown-header">
+              <img src={icon2} alt="" />
+              <span className="dropdown-span">Courses</span>
+            </div>
+            {dropdownOn === "courses" ? (<ChevronDown/>) : ( <ChevronLeft />)}
+           
+          </div>
+          {dropdownOn === 'courses' ? (
+            <div className="dropdown-content bg-black-fade flex flex-col px-[40px]">
+              <Link
+                className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all"
+                to={"/student-portal/eregistrar/courses/"}
+              >
+                MyCourse
+              </Link>
+              <Link
+                to={"/student-portal/eregistrar/course-transfers"}
+                className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all"
+              >
+                Course Transfers
+              </Link>
+            </div>
+          ) : null}
+        </div>
+        <div className="link cursor-pointer">
+          <div className="flex items-center justify-between dropdown-main" onClick={() => handleDropdown("progression")}>
+            <div className="dropdown-header">
+              <FaChartLine />
+              <span className="dropdown-span">Student Progression</span>
+            </div>
+            {dropdownOn === "progression" ? (<ChevronDown/>) : ( <ChevronLeft />)}
+          </div>
+          {dropdownOn === "progression" ? (
+            <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
+              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+                Semester Registration
+              </Link>
+              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+                Readmission
+              </Link>
+              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+                Retakes
+              </Link>
+            </div>
+          ) : null}
+        </div>
+        <div className="link cursor-pointer">
+          <div className="flex items-center justify-between dropdown-main">
+            <div className="dropdown-header" onClick={() => handleDropdown("exams")}>
+              <FaPen />
+              <span className="dropdown-span">Examination</span>
+            </div>
+            {dropdownOn === "exams" ? (<ChevronDown/>) : ( <ChevronLeft />)}
+          </div>
+          {dropdownOn === "exams" ? (
+            <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
+              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+                Exam Results
+              </Link>
+            </div>
+          ) : null}
+        </div>
+        <div className="link cursor-pointer">
+          <div className="flex items-center justify-between dropdown-main">
+            <div className="dropdown-header" onClick={() => handleDropdown("finance")}>
+              <FaBriefcase />
+              <span className="dropdown-span">Finance</span>
+            </div>
+            {dropdownOn === "finance" ? (<ChevronDown/>) : ( <ChevronLeft />)}
+          </div>
+          {dropdownOn === 'finance' ? (
+            <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
+              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+                Fee Statement
+              </Link>
+            </div>
+          ) : null}
+        </div>
+        <div className="link cursor-pointer">
+          <div className="flex items-center justify-between dropdown-main">
+            <div className="dropdown-header" onClick={() => handleDropdown("accomodation")}>
+              <FaBed />
+              <span className="dropdown-span">Accomodation</span>
+            </div>
+            {dropdownOn === "accomodation" ? (<ChevronDown/>) : ( <ChevronLeft />)}
+          </div>
+          {dropdownOn === 'accomodation' ? (
+            <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
+              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+                View/Book Hostel
+              </Link>
+            </div>
+          ) : null}
+        </div>
+        <div className="link cursor-pointer">
+          <div className="flex items-center justify-between dropdown-main"  onClick={() => handleDropdown("profile")}>
+            <div className="dropdown-header">
+              <img src={icon1} alt="" />
+              <span className="dropdown-span">Profile</span>
+            </div>
+            {dropdownOn === "profile" ? (<ChevronDown/>) : ( <ChevronLeft />)}
+          </div>
+          {dropdownOn === 'profile' ? (
+            <div className="dropdown-content bg-black-fade flex flex-col px-[60px] mb-4">
+              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+                View Profile
+              </Link>
+              <Link className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+                Change Password
+              </Link>
+            </div>
+          ) : null}
+        </div>
       </ul>
     </div>
-  )
-}
-
-export default PortalSidebar
-
-
-/* import profile from "../assets/program-icon-3.png";
-import {
-  FaCalendarCheck,
-  FaPencilAlt,
-  FaBookReader,
-  FaReceipt,
-  FaBed,
-  FaUtensils,
-} from "react-icons/fa";
-import { BiX } from "react-icons/bi";
-import { useContext } from "react";
-import { AppContext } from "./AppContext";
-import OutsideClickHandler from "react-outside-click-handler";
-
-// eslint-disable-next-line react/prop-types
-const PortalSidebar = ({ setClickState, clickState }) => {
-  const { sidebarOn, setSidebarOn } = useContext(AppContext);
-
-  return (
-    <OutsideClickHandler onOutsideClick={() => setSidebarOn(false)}>
-      <div
-        className={`relative w-[400px] h-screen overflow-y-hidden  max-test-lg:w-[350px] max-w-[80%] pt-20 border-r-2   transition-all duration-1000 bg-white z-10 ${sidebarOn ? "block" : "hidden"} max-footer-md:fixed max-footer-md:top-0 max-footer-md:bottom-0 max-footer-md:left-0 max-600px:pt-20`}
-      > <BiX
-            className="absolute right-4 top-2 size-8 cursor-pointer max-footer-md:top-auto z-50"
-            onClick={() => setSidebarOn(false)}
-          />
-          <div
-            onClick={() => setClickState("profile")}
-            className={`flex items-center p-4 mt-10 rounded-l-xl max-footer-md:rounded-l-none ${clickState === "profile" ? "bg-gold" : ""}`}
-          >
-            <img
-              src={profile}
-              alt=""
-              className="bg-gray size-8 rounded-full border-2 border-royalblue p-1"
-            />
-            <h1
-              className={`font-semibold pl-4 text-xl transition-all text-royalblue cursor-pointer hover:text-black`}
-            >
-              Profile
-            </h1>
-          </div>
-
-          <ul className="list-none grid grid-cols-1 mt-10 gap-10">
-            <div
-              onClick={() => setClickState("timetable")}
-              className={`flex items-center text-royalblue font-medium p-4  rounded-l-xl text-xl max-footer-md:rounded-l-none cursor-pointer hover:text-black transition-all ${clickState === "timetable" ? "bg-gold" : ""}`}
-            >
-              <FaCalendarCheck className="w-10" />
-              <span className="pl-2 whitespace-nowrap">My Timetable</span>
-            </div>
-            <div
-              onClick={() => setClickState("units-registration")}
-              className={`flex items-center text-royalblue font-medium p-4 text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "units-registration" ? "bg-gold" : ""}`}
-            >
-              <FaPencilAlt className="w-10" />
-              <span className="whitespace-nowrap pl-2">Units Registration</span>
-            </div>
-       
-            <div
-              onClick={() => setClickState("exam-results")}
-              className={`flex items-center text-royalblue font-medium p-4 rounded-l-xl max-footer-md:rounded-l-none text-xl cursor-pointer hover:text-black transition-all ${clickState === "exam-results" ? "bg-gold" : ""}`}
-            >
-              <FaBookReader className="w-10" />
-              <span className="whitespace-nowrap pl-2">Exam Results</span>
-            </div>
-            <div
-              onClick={() => setClickState("fees-statement")}
-              className={`flex items-center text-royalblue font-medium p-4 text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none ${clickState === "fees-statement" ? "bg-gold" : ""}`}
-            >
-              <FaReceipt className="w-10" />
-              <span className="whitespace-nowrap pl-2">Fees Statement</span>
-            </div>
-            <div
-              onClick={() => setClickState("accomodation")}
-              className={`flex-items-center text-royalblue font-medium text-xl cursor-pointer hover:text-black transition-all rounded-l-xl max-footer-md:rounded-l-none p-4 ${clickState === "accomodation" ? "bg-gold" : ""}`}
-            >
-              <span>
-                <FaBed className="w-10" />
-                <FaUtensils className="w-10" />
-              </span>
-              <span className="pl-2">Hostels and Catering</span>
-            </div>
-          </ul>
-        </div>
-    </OutsideClickHandler>
   );
 };
 
 export default PortalSidebar;
- */

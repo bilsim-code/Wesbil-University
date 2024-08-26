@@ -59,7 +59,8 @@
 .portal-sidebar {
     background: goldenrod;
     min-height: 100vh;
-    width: 250px;
+    overflow-y: auto;
+    width: 300px;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -73,27 +74,29 @@
     padding-top: 80px;
 }
 
-.portal-sidebar-list .link {
+.portal-sidebar-list .dropdown-header {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     padding: 10px;
     padding-left: 20px;
     color: #fff;
     font-weight: 500;
     /* background: rgba(0, 0, 0, 0.084); */
-    transition: all .5s
+    transition: all .5s;
+    flex: 1;
 }
 
-.portal-sidebar-list .link:hover {
+.portal-sidebar-list .dropdown-main:hover,
+.portal-sidebar-list .dropdown-header:hover {
     background: rgba(0, 0, 0, .05)
 }
 
-.portal-sidebar-list .link span {
-    transition: all .5s
+.portal-sidebar-list .dropdown-header .dropdown-span {
+    transition: all .6s;
 }
 
-.portal-sidebar-list .link:hover span{
+.portal-sidebar-list .dropdown-header:hover span{
     color: rgba(0, 0, 0, 0.3); 
 }
 
@@ -104,9 +107,26 @@
 .portal-sidebar-list svg {
     width: 18px;
     height: 20px;
+    margin-right: 10px;
     color: #dbdbdb;
 }
 
-/* .sidebar-routes {
-    flex: 1
-} */
+.portal-sidebar::-webkit-scrollbar {
+    background: #fff;
+}
+
+.portal-sidebar::-webkit-scrollbar button {
+    background: #fff;
+}
+
+.portal-sidebar::-webkit-scrollbar-thumb {
+    background: goldenrod
+}
+
+.portal-sidebar::-webkit-scrollbar-track {
+    background: red;
+}
+
+.portal-sidebar::-webkit-scrollbar-track-piece {
+    background: royalblue;
+}

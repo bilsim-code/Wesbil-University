@@ -22,7 +22,8 @@ export default {
       'blue-shade-fade': 'rgba(7, 28, 95, 0.582)',
       'heroBg': "rgba(8,0, 58, .1)",
       'purple': 'purple',
-      'green': "#0f0"
+      'green': "#0f0",
+      'black-fade': "rgba(0, 0, 0, 0.05);",
     },
     screens: {
       'nav-ul-md': '890px',
