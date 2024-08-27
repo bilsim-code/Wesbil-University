@@ -3,20 +3,9 @@ import { unitDetails } from "../Components/UnitDetails"
 import {Check, X} from 'react-feather'
 
 const SemRegister = () => {
-  const [multiple, setMultiple] = useState([])
+ 
 
-  function handleMultipleSelection(id) {
-    let copyMultiple = [...multiple];
-    let indexOfCurrentId = copyMultiple.indexOf(id);
-    if(indexOfCurrentId === -1) {
-      copyMultiple.push(id);
-    }
-    else {
-      copyMultiple.splice(indexOfCurrentId, 1);
-    }
-    setMultiple(copyMultiple);
-    console.log(multiple)
-  }
+ 
   return (
     <div className="">
     <h2 className="text-center text-red text-3xl mt-10 ">Register for this semester&apos;s Units</h2>
@@ -34,8 +23,8 @@ const SemRegister = () => {
       <div key={index} className="grid grid-cols-4 place-items-center border-b py-4 mb-3 max-430px:grid-cols-3 max-430px:grid-rows-2 font-semibold">
       <p className="">{item.name}</p>
       <p>{item.code}</p>
-      <p className="bg-gold p-2 rounded-md cursor-pointer text-royalblue hover:bg-gold-fade" onClick={() => handleMultipleSelection(item._id)}>{multiple.indexOf(item._id) !== -1 ? <Check/> : "Register"}</p>
-      <p className="bg-gold p-2 rounded-md cursor-pointer text-red hover:bg-gold-fade" onClick={() => handleMultipleSelection(item._id)}>{multiple.indexOf(item._id) !== -1 ? "Drop" : <X/>}</p>
+      <p className="bg-gold p-2 rounded-md cursor-pointer text-royalblue hover:bg-gold-fade" >Register</p>
+      <p className="bg-gold p-2 rounded-md cursor-pointer text-red hover:bg-gold-fade" >Drop</p>
       </div>
     ))}
 
