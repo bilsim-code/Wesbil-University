@@ -70,7 +70,7 @@ const PortalSidebar = () => {
           {dropdownOn === "progression" && sidebarOpen ? (
             <div className="dropdown-content bg-black-fade flex flex-col px-[60px]">
               <Link to={'/student-portal/eregistrar/semregister'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
-                Semester Registration
+                Units Registration
               </Link>
               <Link to={'/student-portal/eregistrar/readmission'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Readmission
