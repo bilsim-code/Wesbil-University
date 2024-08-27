@@ -23,7 +23,10 @@ export default {
       'heroBg': "rgba(8,0, 58, .1)",
       'purple': 'purple',
       'green': "#0f0",
-      'black-fade': "rgba(0, 0, 0, 0.05);",
+      'green-alt': "rgba(3, 147, 3, 0.619)",
+      'green-bg': "rgba(3, 147, 3, 0.089)",
+      'black-fade': "rgba(0, 153, 255, 0.06)",
+      'gray-alt': "rgb(110, 110, 110)"
     },
     screens: {
       'nav-ul-md': '890px',
