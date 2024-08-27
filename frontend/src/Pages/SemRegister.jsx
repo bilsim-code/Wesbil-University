@@ -3,7 +3,33 @@ import { unitDetails } from "../Components/UnitDetails"
 import {Check, X} from 'react-feather'
 
 const SemRegister = () => {
- 
+ const [register, setRegister] = useState([]);
+ const [drop, setDrop] = useState([]);
+
+ function handleRegister(id) {
+  if(register.includes(id)) {
+    setRegister(register.filter(unitId => unitId !== id))
+  }
+  else {
+    setRegister(prev => [...prev, id]); 
+    setDrop(drop.filter(unitId => unitId !== id));
+  }
+ }
+
+ function handleDrop(id) {
+  if(drop.includes(id)) {
+    setDrop(drop.filter(unitId => unitId !== id));
+  }
+  else {
+    setDrop(prev => [...prev, id]);
+    setRegister(register.filter(unitId => unitId !== id));
+  }
+ }
+
+ function handleSubmit() {
+  console.log(register);
+  console.log(drop);
+ }
 
  
   return (
@@ -23,12 +49,16 @@ const SemRegister = () => {
       <div key={index} className="grid grid-cols-4 place-items-center border-b py-4 mb-3 max-430px:grid-cols-3 max-430px:grid-rows-2 font-semibold">
       <p className="">{item.name}</p>
       <p>{item.code}</p>
-      <p className="bg-gold p-2 rounded-md cursor-pointer text-royalblue hover:bg-gold-fade" >Register</p>
-      <p className="bg-gold p-2 rounded-md cursor-pointer text-red hover:bg-gold-fade" >Drop</p>
+      <p className="bg-gold p-2 rounded-md cursor-pointer text-royalblue hover:bg-gold-fade" onClick={() => handleRegister(item._id)}>{register.includes(item._id) ? <Check/> : "Register"} </p>
+       
+      <p className="bg-gold p-2 rounded-md cursor-pointer text-red hover:bg-gold-fade" 
+       onClick={() => handleDrop(item._id)}>
+      {drop.includes(item._id) ? <X/> : "Drop"}
+    </p>
       </div>
     ))}
 
-    <button className="bg-royalblue grid mx-auto mt-10 p-2 w-1/2 max-w-[200px] mb-10 text-white font-bold uppercase rounded-md hover:text-gold shadow-md shadow-black">Confirm</button>
+    <button className="bg-royalblue grid mx-auto mt-10 p-2 w-1/2 max-w-[200px] mb-10 text-white font-bold uppercase rounded-md hover:text-gold shadow-md shadow-black" onClick={handleSubmit}>Confirm</button>
     
   </div>
   )

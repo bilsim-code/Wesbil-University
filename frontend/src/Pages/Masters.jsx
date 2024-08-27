@@ -1,7 +1,9 @@
 
 const Masters = () => {
   return (
-    <div>Masters</div>
+    <div className="mt-24">
+      <p>Masters Programmes are not available at the moment...</p>
+    </div>
   )
 }
 
