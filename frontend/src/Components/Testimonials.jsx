@@ -22,7 +22,7 @@ const Testimonials = () => {
             <OutsideClickHandler onOutsideClick={() => setActiveIndex(null)}>                    
           <div
             style={{ backgroundImage: `url(${item.image})` }}
-            className={` bg-no-repeat bg-cover bg-center h-64 relative flex items-center justify-center rounded-md shadow-md hover:scale-[1.05] hover:overflow-hidden transition-all duration-500 ${activeIndex === index && "h-[74vh] test-xl:h-[70vh] test-lg:h-[60vh] 480px:h-[78vh] test-md:h-[60vh] test-sm:h-[94vh] nav-ul-md:h-[78vh]"}`}
+            className={` bg-no-repeat bg-cover bg-center h-64 relative flex items-center justify-center rounded-md shadow-md hover:scale-[1.05] hover:overflow-hidden transition-all duration-500 ${activeIndex === index && "h-[74vh] test-xl:h-[70vh] test-lg:h-[60vh] 480px:h-[78vh] test-md:h-[60vh] test-sm:h-[94vh] nav-ul-md:h-[78vh] max-270px:min-h-[100vh]"}`}
           >
             {activeIndex === index ? (
               <div className="absolute inset-0 bg-white  p-2 ">

@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { X, Search } from "react-feather";
 import { AppContext } from "./AppContext";
+import OutsideClickHandler from "react-outside-click-handler";
 
 const SearchContainer = () => {
   const { setShowSearch } = useContext(AppContext);
   return (
     <div>
-      <form className="bg-black-shade h-[50%] absolute top-0 right-0 w-full flex items-center footer-md:px-[20%] p-[5%] gap-[5%] transition-all duration-1000">
+        <OutsideClickHandler onOutsideClick={() => setShowSearch(false)}>
+      <form className="bg-black-shade h-[50%] fixed top-0 right-0 w-full flex items-center footer-md:px-[20%] p-[5%] gap-[5%] transition-all duration-1000">
         <div className="w-full flex items-center gap-[5%]">
           <input
             type="search"
@@ -27,6 +29,7 @@ const SearchContainer = () => {
           onClick={() => setShowSearch(false)}
         />
       </form>
+      </OutsideClickHandler>
     </div>
   );
 };
