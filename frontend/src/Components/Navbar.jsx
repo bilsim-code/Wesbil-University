@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import logoImg from "../assets/wesbil_logo.png";
@@ -9,7 +10,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import profile from "../assets/student-profile.png";
 import { AppContext } from "./AppContext";
 
-const Navbar = () => {
+const Navbar = ({setShowSearch}) => {
   const location = useLocation();
   const [LinkDropdownOn, setLinkDropdownOn] = useState(false);
   const [portalDropdownOn, setPortalDropdownOn] = useState(false);
@@ -365,7 +366,7 @@ const Navbar = () => {
           location.pathname ===
             "/student-portal/eregistrar/profile/change-password"
         ) && (
-          <Search className="nav-icon size-6 cursor-pointer text-white max-270px:hidden" />
+          <Search className="nav-icon size-6 cursor-pointer text-white max-270px:hidden" onClick={() => setShowSearch(true)} />
         )}
 
         {menuShow ? (

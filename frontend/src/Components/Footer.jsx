@@ -79,9 +79,6 @@ const Footer = () => {
             <RouterLink to={"staff-portal"} className="hover:underline">
               Staff Portal
             </RouterLink>
-            <RouterLink to={"student-email"} className="hover:underline">
-              Student Email Activation Guide{" "}
-            </RouterLink>
             <RouterLink className="hover:underline flex items-center gap-2">
               <span>Tenders</span>
               <div className="text-[10px] rounded-sm text-black font-bold bg-gold uppercase tender-show">

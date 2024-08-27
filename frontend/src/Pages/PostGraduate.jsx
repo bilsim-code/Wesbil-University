@@ -1,7 +1,7 @@
 
 const PostGraduate = () => {
   return (
-    <div className="mt-24">Post-Graduate Programmes are not available at the moment...</div>
+    <div className="mt-24 min-h-screen">Post-Graduate Programmes are not available at the moment...</div>
   )
 }
 

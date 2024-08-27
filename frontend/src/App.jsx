@@ -23,80 +23,89 @@ import Bachelors from "./Pages/Bachelors";
 import Masters from "./Pages/Masters";
 import PostGraduate from "./Pages/PostGraduate";
 import ICTSupport from "./Pages/ICTSupport";
-import RequestStudentEmail from "./Pages/RequestStudentEmail";
 import StudentPortal from "./Pages/StudentPortal";
 import StaffPortal from "./Pages/StaffPortal";
 import NewPrograms from "./Pages/NewPrograms";
 import OnlineClasses from "./Pages/OnlineClasses";
-import { useEffect } from "react";
+import { useEffect, useState,  } from "react";
 import StudentPortalLogin from "./Pages/StudentPortalLogin";
 import StaffPortalLogin from "./Pages/StaffPortalLogin";
+import SearchContainer from "./Components/SearchContainer";
 
 const App = () => {
+  const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
   useEffect(() => {
     // Scroll to top when route changes
     window.scrollTo(0, 0);
-}, [location]);
+  }, [location]);
   return (
     <div className="app overflow-x-hidden">
-      <Routes>
-        {/* INDEPENDENT ROUTES */}
-       
-       <Route path="/student-portal-login" element={<StudentPortalLogin/>} />
-       <Route path="/staff-portal-login" element={<StaffPortalLogin/>} />
-        <Route path="/join-us" element={<JoinUs />} />
+      <>
+      {showSearch ? <SearchContainer setShowSearch={setShowSearch}/> : <></>}
+        <Routes>
+          {/* INDEPENDENT ROUTES */}
 
-        <Route
-          path="/*"
-          element={
-            <>
-              <Navbar className="mainNav" />
-              <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route path="/mylibrary" element={<MyLibrary />} />
-                <Route path="/student-portal/eregistrar/*" element={<ERegistrar />} />
-                <Route path="/student-portal/elearning" element={<Elearning />} />
-                <Route path="/portals" element={<Portals />} />
-                <Route path="/student-portal" element={<StudentPortal />} />
-                <Route path="/staff-login" element={<StaffPortal />} />
-                {/* SCHOOLS */}
-                <Route path="/sob" element={<Sob />} />
-                <Route path="/sot" element={<Sot />} />
-                <Route path="/som" element={<Somed />} />
-                <Route path="/sms" element={<Sms />} />
-                <Route path="/soe" element={<Soe />} />
-                {/* ALT ROUTES */}
-                <Route path="/courses" element={<Courses />} />
-                <Route path="/research" element={<Research />} />
-                <Route path="/schools" element={<Schools />} />
-                <Route path="/campuses" element={<Campuses />} />
-                {/* CAMPUSES */}
-                <Route path="/main-campus" element={<MainCampus />} />
-                <Route path="/alt-campus" element={<AltCampus />} />
-                {/* PROGRAMMES */}
-                <Route path="/diploma" element={<Diploma />} />
-                <Route path="/bachelors" element={<Bachelors />} />
-                <Route path="/masters" element={<Masters />} />
-                <Route path="/post-graduate" element={<PostGraduate />} />
-                {/* DROPDOWN */}
-                <Route path="/ict-support" element={<ICTSupport />} />
-                <Route
-                  path="/student-email"
-                  element={<RequestStudentEmail />}
-                />
+          <Route
+            path="/student-portal-login"
+            element={<StudentPortalLogin />}
+          />
+          <Route path="/staff-portal-login" element={<StaffPortalLogin />} />
+          <Route path="/join-us" element={<JoinUs />} />
 
-                {/* ACCORDION */}
-                <Route path="/online-classes" element={<OnlineClasses />} />
-                <Route path="/new-programs" element={<NewPrograms />} />
-              </Routes>
-              <Footer />
-            </>
-          }
-        />
+          <Route
+            path="/*"
+            element={
+              <>
+                <Navbar className="mainNav" />
+                <Routes>
+                  <Route exact path="/" element={<Home />} />
+                  <Route path="/mylibrary" element={<MyLibrary />} />
+                  <Route
+                    path="/student-portal/eregistrar/*"
+                    element={<ERegistrar />}
+                  />
+                  <Route
+                    path="/student-portal/elearning"
+                    element={<Elearning />}
+                  />
+                  <Route path="/portals" element={<Portals />} />
+                  <Route path="/student-portal" element={<StudentPortal />} />
+                  <Route path="/staff-login" element={<StaffPortal />} />
+                  {/* SCHOOLS */}
+                  <Route path="/sob" element={<Sob />} />
+                  <Route path="/sot" element={<Sot />} />
+                  <Route path="/som" element={<Somed />} />
+                  <Route path="/sms" element={<Sms />} />
+                  <Route path="/soe" element={<Soe />} />
+                  {/* ALT ROUTES */}
+                  <Route path="/courses" element={<Courses />} />
+                  <Route path="/research" element={<Research />} />
+                  <Route path="/schools" element={<Schools />} />
+                  <Route path="/campuses" element={<Campuses />} />
+                  {/* CAMPUSES */}
+                  <Route path="/main-campus" element={<MainCampus />} />
+                  <Route path="/alt-campus" element={<AltCampus />} />
+                  {/* PROGRAMMES */}
+                  <Route path="/diploma" element={<Diploma />} />
+                  <Route path="/bachelors" element={<Bachelors />} />
+                  <Route path="/masters" element={<Masters />} />
+                  <Route path="/post-graduate" element={<PostGraduate />} />
+                  {/* DROPDOWN */}
+                  <Route path="/ict-support" element={<ICTSupport />} />
 
-        {/* NAVBAR */}
-      </Routes>
+                  {/* ACCORDION */}
+                  <Route path="/online-classes" element={<OnlineClasses />} />
+                  <Route path="/new-programs" element={<NewPrograms />} />
+                </Routes>
+                <Footer />
+              </>
+            }
+          />
+
+          {/* NAVBAR */}
+        </Routes>
+      </>
     </div>
   );
 };
