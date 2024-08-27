@@ -27,14 +27,15 @@ import StudentPortal from "./Pages/StudentPortal";
 import StaffPortal from "./Pages/StaffPortal";
 import NewPrograms from "./Pages/NewPrograms";
 import OnlineClasses from "./Pages/OnlineClasses";
-import { useEffect, useState,  } from "react";
+import { useContext, useEffect, } from "react";
 import StudentPortalLogin from "./Pages/StudentPortalLogin";
 import StaffPortalLogin from "./Pages/StaffPortalLogin";
+import { AppContext } from "./Components/AppContext";
 import SearchContainer from "./Components/SearchContainer";
 
 const App = () => {
-  const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
+  const{showSearch, } = useContext(AppContext);
   useEffect(() => {
     // Scroll to top when route changes
     window.scrollTo(0, 0);
@@ -42,7 +43,7 @@ const App = () => {
   return (
     <div className="app overflow-x-hidden">
       <>
-      {showSearch ? <SearchContainer setShowSearch={setShowSearch}/> : <></>}
+      {showSearch ? <SearchContainer/> : <></>}
         <Routes>
           {/* INDEPENDENT ROUTES */}
 

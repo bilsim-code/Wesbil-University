@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import logoImg from "../assets/wesbil_logo.png";
@@ -10,12 +9,12 @@ import OutsideClickHandler from "react-outside-click-handler";
 import profile from "../assets/student-profile.png";
 import { AppContext } from "./AppContext";
 
-const Navbar = ({setShowSearch}) => {
+const Navbar = () => {
   const location = useLocation();
   const [LinkDropdownOn, setLinkDropdownOn] = useState(false);
   const [portalDropdownOn, setPortalDropdownOn] = useState(false);
   const [menuShow, setMenuShow] = useState(false);
-  const { setSidebarOn, sidebarOpen, setSidebarOpen } = useContext(AppContext);
+  const { setSidebarOn, sidebarOpen, setSidebarOpen, setShowSearch, showSearch} = useContext(AppContext);
 
   const navRef = useRef();
 
@@ -340,7 +339,7 @@ const Navbar = ({setShowSearch}) => {
       ) : null}
 
       <div className="flex gap-4 pr-4 nav-ul-md:pr-0">
-        {!(
+        {(!(
           location.pathname === "/student-portal" ||
           location.pathname === "/staff-portal" ||
           location.pathname === "/student-portal/elearning" ||
@@ -365,7 +364,7 @@ const Navbar = ({setShowSearch}) => {
           location.pathname === "/student-portal/eregistrar/profile" ||
           location.pathname ===
             "/student-portal/eregistrar/profile/change-password"
-        ) && (
+        ) && !showSearch) && (
           <Search className="nav-icon size-6 cursor-pointer text-white max-270px:hidden" onClick={() => setShowSearch(true)} />
         )}
 

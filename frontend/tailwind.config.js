@@ -12,6 +12,7 @@ export default {
       'white': '#fff',
       'white-fade': "rgba(255,255,255,.2)",
       'black': "#000",
+      'black-shade': "rgba(0, 0, 0, .5)",
       'royalblue': 'royalblue',
       'transparent': 'transparent',
       'almost-black': "#333",
