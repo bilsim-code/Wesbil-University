@@ -63,7 +63,8 @@ export default {
         med: "url('./src/assets/school-of-med.jpg')",
         somedHero: "linear-gradient(rgba(8,0, 58, .3), rgba(8, 0, 58,.3)), url('./src/assets/med.jpg')",
         smsHero: "linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('./src/assets/soms.jpeg')",
-        soeHero: "linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('./src/assets/soe.jpeg')"
+        soeHero: "linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('./src/assets/soe.jpeg')",
+        profile: " url('./src/assets/school-of-business-logo.webp')"
         
       }
     },

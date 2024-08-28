@@ -17,7 +17,7 @@ const ERegistrar = () => {
   return (
     <div className="e-registrar ">
       <PortalSidebar  />
-      <div className="sidebar-routes p-5 ml-20">
+      <div className="sidebar-routes p-5 ml-8">
         <Routes>
           <Route path="/" element={<StudentQuickLinks />} />
           <Route path="/courses" element={<MyCourses/>} />
