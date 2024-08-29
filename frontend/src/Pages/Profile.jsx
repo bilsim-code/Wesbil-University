@@ -18,7 +18,7 @@ const Profile = () => {
       </div>
       
       {/* Profile Details */}
-      <div className="relative max-w-4xl mx-auto bg-gray-fade shadow-lg rounded-lg p-6 text-black-shade">
+      <div className="relative max-w-4xl mx-auto bg-gray-fade shadow-lg rounded-lg p-6 text-black-shade max-430px:pl-5">
         <div className="absolute left-1.5 top-4 bg-gold text-white p-2 rounded">
           <User />
         </div>
@@ -49,7 +49,7 @@ const Profile = () => {
 
       {/* contact */}
 
-      <div className="relative max-w-4xl my-10 mx-auto bg-gray-fade shadow-lg rounded-lg p-6 text-black-shade">
+      <div className="relative max-w-4xl my-10 mx-auto bg-gray-fade shadow-lg rounded-lg p-6 text-black-shade max-430px:pl-5">
         <div className="absolute left-1.5 top-4 bg-green-alt text-white p-2 rounded">
           <FaPhoneAlt />
         </div>
@@ -68,7 +68,7 @@ const Profile = () => {
       </div>
 
       {/* address information */}
-      <div className="relative max-w-4xl my-10 mx-auto bg-gray-fade shadow-lg rounded-lg p-6 text-black-shade">
+      <div className="relative max-w-4xl my-10 mx-auto bg-gray-fade shadow-lg rounded-lg p-6 text-black-shade max-430px:pl-5">
         <div className="absolute left-1.5 top-4 bg-white text-black p-2 rounded">
           <Send />
         </div>
@@ -93,7 +93,7 @@ const Profile = () => {
       </div>
 
       {/* course details */}
-      <div className="relative max-w-4xl my-10 mx-auto bg-gray-fade shadow-lg rounded-lg p-6 text-black-shade">
+      <div className="relative max-w-4xl my-10 mx-auto bg-gray-fade shadow-lg rounded-lg p-6 text-black-shade max-430px:pl-5">
         <div className="absolute left-1.5 top-4 bg-black text-white p-2 rounded">
           <FaBriefcase />
         </div>

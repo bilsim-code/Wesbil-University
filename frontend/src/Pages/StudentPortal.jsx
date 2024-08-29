@@ -18,7 +18,7 @@ const StudentPortal = () => {
         <div>
           <h1 className='text-center mt-2 font-bold text-[1.8rem]'>My Units</h1>
           <hr className='mb-3 bg-royalblue border-0 h-[1px]'/>
-          <ul className='list-decimal font-sans flex flex-col gap-1'>
+          <ul className='list-decimal font-sans flex flex-col gap-1 '>
             <li>Human Computer Interaction</li>
             <li>Computer Architecture and Organization</li>
             <li>Artificial Intelligence</li>
