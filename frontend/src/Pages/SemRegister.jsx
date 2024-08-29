@@ -33,7 +33,7 @@ const SemRegister = () => {
 
  
   return (
-    <div className="ml-6">
+    <div className="">
     <h2 className="text-center text-red text-3xl mt-10 ">Register for this semester&apos;s Units</h2>
     {/* grid */}
     <div className="grid grid-cols-4 mt-10 place-items-center border-b max-430px:grid-cols-3

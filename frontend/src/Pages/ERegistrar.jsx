@@ -11,13 +11,14 @@ import FeesStatement from "./FeesStatement";
 import Hostel from "./Hostel";
 import Profile from './Profile'
 import ChangePassword from "./ChangePassword";
+import ReserveBed from "./ReserveBed";
 
 
 const ERegistrar = () => {
   return (
     <div className="e-registrar ">
       <PortalSidebar  />
-      <div className="sidebar-routes p-5 ml-8">
+      <div className="sidebar-routes p-5 ml-14">
         <Routes>
           <Route path="/" element={<StudentQuickLinks />} />
           <Route path="/courses" element={<MyCourses/>} />
@@ -30,6 +31,7 @@ const ERegistrar = () => {
           <Route path="/feestatement" element={<FeesStatement/>} />
           <Route path="/hostel" element={<Hostel/>} />
           <Route path="/profile/change-password" element={<ChangePassword/>} />
+          <Route path="/hostel/reserve-bed" element={<ReserveBed/>} />
         </Routes>
         
       </div>
