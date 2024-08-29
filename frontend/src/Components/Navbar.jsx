@@ -96,11 +96,11 @@ const Navbar = () => {
           location.pathname ===
             "/student-portal/eregistrar/student-progression" ||
           location.pathname === "/student-portal/eregistrar/examination" ||
-          location.pathname === "/student-portal/eregistrar/finance" ||
+          location.pathname === "/student-portal/eregistrar/finance" ||  location.pathname === "/student-portal/eregistrar/semregister" ||  location.pathname === "/student-portal/eregistrar/feestatement" ||  location.pathname === "/student-portal/eregistrar/retakes" ||  location.pathname === "/student-portal/eregistrar/examresults" ||  location.pathname === "/student-portal/eregistrar/readmission" ||
           location.pathname === "/student-portal/eregistrar/hostel" ||
           location.pathname === "/student-portal/eregistrar/hostel/reserve-bed" ||
           location.pathname ===
-            "/student-portal/eregistrar/course-transfers" ? (
+            "/student-portal/eregistrar/course-transfers"  || location.pathname === "/student-portal/eregistrar/profile" ||  location.pathname === "/student-portal/eregistrar/profile/change-password"  ? (
             <>
               <li className="nav-li pb-6 text-white nav-ul-md:text-white nav-ul-md:p-0 nav-ul-md:pr-[30px] font-medium">
                 <RouterLink

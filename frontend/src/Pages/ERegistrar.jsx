@@ -31,7 +31,7 @@ const ERegistrar = () => {
           <Route path="/feestatement" element={<FeesStatement/>} />
           <Route path="/hostel" element={<Hostel/>} />
           <Route path="/profile/change-password" element={<ChangePassword/>} />
-          <Route path="/hostel/reserve-bed" element={<ReserveBed/>} />
+          <Route path="/hostel/reserve-bed" element={<ReserveBed/>  } />
         </Routes>
         
       </div>
