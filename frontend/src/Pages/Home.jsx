@@ -10,11 +10,12 @@ import { Link } from "react-scroll";
 import Questions from "../Components/Accordion";
 import Countup from 'react-countup';
 import Testimonials from "../Components/Testimonials";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = window.addEventListener("scroll", () => {
@@ -121,15 +122,23 @@ const Home = () => {
       </div>
 
       <Questions/>
+      <div className="mt-20">
+        <section className="flex flex-col items-center max-w-4xl mx-auto px-4 gap-5 bg-contactImgMod w-full py-10 no-repeat bg-center bg-cover bg-fixed">
+          <h1 className="text-royalblue font-semibold text-3xl max-430px:text-xl">JOIN US</h1>
+          <p className="font-medium text-2xl max-430px:text-lg">We don’t just give students an education and experiences that set them up for success in a career.
+          We help them succeed in their career—to discover a field they are passionate about and dare to lead it.</p>
+          <button onClick={() => navigate("/join-us")} className="bg-gold p-2 text-white rounded-md font-bold 430px:text-lg ">APPLY NOW</button>
+        </section>
+      </div>
       {/* Bottom */}
       {showScrollTop && (
         <Link
           to="hero"
           spy={true}
           smooth={true}
-          className="fixed bottom-6 right-2 z-50"
+          className="fixed bottom-10 right-4 z-50"
         >
-          <FaCircleChevronUp className="size-7 cursor-pointer text-white bg-transparent" />
+          <FaCircleChevronUp className="size-10 cursor-pointer text-white bg-transparent" />
         </Link>
       )}
 
