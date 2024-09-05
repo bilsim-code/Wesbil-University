@@ -32,14 +32,14 @@ const Questions = () => {
       details:
         "To join us, fill the student application form and wait for our response.",
       link: "click here to apply",
-      route: "online-application"
+      route: "join-us"
     },
     {
       image: <FaPlus />,
       heading: "Are there any new programs to enroll in?",
       details: "To see our new programs, ",
       link: "click here",
-      route: "new-programs"
+      route: "courses"
     },
   ];
   return (
