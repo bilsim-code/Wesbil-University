@@ -37,7 +37,7 @@ const PortalSidebar = () => {
           >
             <div className="dropdown-header">
               <img src={icon2} alt="" />
-              <span className="dropdown-span">Courses</span>
+              <span className="dropdown-span">My Course</span>
             </div>
             {dropdownOn === "courses" ? (<ChevronDown className="chevron"/>) : ( <ChevronLeft className="chevron" />)}
            
@@ -48,14 +48,14 @@ const PortalSidebar = () => {
                 className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all"
                 to={"/student-portal/eregistrar/courses/"}
               >
-                MyCourse
+                Course Info
               </Link>
-              <Link
+             {/*  <Link
                 to={"/student-portal/eregistrar/course-transfers"}
                 className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all"
               >
                 Course Transfers
-              </Link>
+              </Link> */}
             </div>
           ) : null}
         </div>
@@ -63,7 +63,7 @@ const PortalSidebar = () => {
           <div className="flex items-center justify-between dropdown-main" onClick={() => handleDropdown("progression")}>
             <div className="dropdown-header">
               <FaChartLine />
-              <span className="dropdown-span">Student Progression</span>
+              <span className="dropdown-span">My Units</span>
             </div>
             {dropdownOn === "progression" ? (<ChevronDown className="chevron"/>) : ( <ChevronLeft className="chevron" />)}
           </div>
@@ -72,11 +72,11 @@ const PortalSidebar = () => {
               <Link to={'/student-portal/eregistrar/semregister'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Units Registration
               </Link>
-              <Link to={'/student-portal/eregistrar/readmission'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
+            {/*   <Link to={'/student-portal/eregistrar/readmission'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
                 Readmission
-              </Link>
+              </Link> */}
               <Link to={'/student-portal/eregistrar/retakes'} className="font-medium text-royalblue text-sm py-3 hover:text-white transition-all">
-                Retakes
+                Retakes/Supplementary exams
               </Link>
             </div>
           ) : null}
@@ -117,7 +117,7 @@ const PortalSidebar = () => {
           <div className="flex items-center justify-between dropdown-main" onClick={() => handleDropdown("accomodation")}>
             <div className="dropdown-header" >
               <FaBed />
-              <span className="dropdown-span">Accomodation</span>
+              <span className="dropdown-span">My Accomodation</span>
             </div>
             {dropdownOn === "accomodation" ? (<ChevronDown className="chevron"/>) : ( <ChevronLeft className="chevron" />)}
           </div>
@@ -133,7 +133,7 @@ const PortalSidebar = () => {
           <div className="flex items-center justify-between dropdown-main"  onClick={() => handleDropdown("profile")}>
             <div className="dropdown-header">
               <img src={icon1} alt="" />
-              <span className="dropdown-span">Profile</span>
+              <span className="dropdown-span">My Profile</span>
             </div>
             {dropdownOn === "profile"? (<ChevronDown className="chevron"/>) : ( <ChevronLeft className="chevron" />)}
           </div>
