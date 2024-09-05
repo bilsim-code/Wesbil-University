@@ -3,7 +3,7 @@ import image2 from '../assets/princeton3.jpg'
 import image3 from '../assets/hero.png'
 import image4 from '../assets/princeton cs.jpg'
 import image5 from '../assets/princeton1.jpg'
-import image6 from '../assets/school-of-business-logo.webp'
+import image6 from '../../public/school-of-business-logo.webp'
 
 const carouselImages = [
     image1,
