@@ -9,7 +9,7 @@ const SearchContainer = () => {
     <div>
         <OutsideClickHandler onOutsideClick={() => setShowSearch(false)}>
       <form className="bg-black-shade h-[50%] fixed top-0 right-0 w-full flex items-center footer-md:px-[20%] p-[5%] gap-[5%] transition-all duration-1000">
-        <div className="w-full flex items-center gap-[5%]">
+        <div className="w-full flex items-center gap-[5%]  z-[100]">
           <input
             type="search"
             name="search"
