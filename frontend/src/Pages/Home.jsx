@@ -124,8 +124,8 @@ const Home = () => {
       <Questions/>
       <div className="mt-20">
         <section className="flex flex-col items-center max-w-4xl mx-auto px-4 gap-5 bg-contactImgMod w-full py-10 no-repeat bg-center bg-cover bg-fixed">
-          <h1 className="text-royalblue font-semibold text-3xl max-430px:text-xl">JOIN US</h1>
-          <p className="font-medium text-2xl max-430px:text-lg">We don’t just give students an education and experiences that set them up for success in a career.
+          <h1 className="text-gold font-bold text-3xl max-430px:text-xl">JOIN US</h1>
+          <p className="font-medium text-xl max-430px:text-lg">We don’t just give students an education and experiences that set them up for success in a career.
           We help them succeed in their career—to discover a field they are passionate about and dare to lead it.</p>
           <button onClick={() => navigate("/join-us")} className="bg-gold p-2 text-white rounded-md font-bold 430px:text-lg ">APPLY NOW</button>
         </section>
