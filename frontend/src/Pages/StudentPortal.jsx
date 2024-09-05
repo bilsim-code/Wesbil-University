@@ -4,7 +4,7 @@ const StudentPortal = () => {
   return (
     <div className="mt-24 min-h-screen w-[1280px] max-w-[90%] mx-auto ">
       <div className='flex flex-col items-center gap-3'>
-        <img src={profile} alt="" title='your-profile' className='w-[300px] max-w-full'/>
+        <img src={profile} alt="" title='your-profile' className='w-[140px] max-w-full'/>
         <h1 className='font-semibold text-[1.2rem] max-430px:text-base'><span className='text-royalblue uppercase font-mono'>Name: </span><span className='font-mono'>Wanjala Bildad Simiyu</span></h1>
         <h1 className='font-semibold text-[1.2rem] max-430px:text-base font-mono'><span className='text-royalblue uppercase'>ADM No: </span><span>BSCS/151J/2022</span></h1>
         <h1 className='font-semibold text-[1.2rem] max-430px:text-base font-mono'><span className='text-royalblue uppercase'>school: </span><span>School of Technology</span></h1>

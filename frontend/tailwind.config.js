@@ -58,14 +58,14 @@ export default {
         contactImg: "url('./public/gallery-1.png')",
         contactImgMod: "linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .3)), url('./public/gallery-1.png')",
         sotHero: "linear-gradient(rgba(8,0, 58, .3), rgba(8, 0, 58,.3)), url('./public/princeton cs.jpg')",
-        educ: "url('./src/assets/educ.jpg')",
-        math: "url('./src/assets/math.jpg')",
-        tech: "url('./src/assets/princeton-sot.jpg')",
-        med: "url('./src/assets/school-of-med.jpg')",
-        somedHero: "linear-gradient(rgba(8,0, 58, .3), rgba(8, 0, 58,.3)), url('./src/assets/med.jpg')",
-        smsHero: "linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('./src/assets/soms.jpeg')",
-        soeHero: "linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('./src/assets/soe.jpeg')",
-        profile: " url('./src/assets/school-of-business-logo.webp')"
+        educ: "url('./public/educ.jpg')",
+        math: "url('./public/math.jpg')",
+        tech: "url('./public/princeton-sot.jpg')",
+        med: "url('./public/school-of-med.jpg')",
+        somedHero: "linear-gradient(rgba(8,0, 58, .3), rgba(8, 0, 58,.3)), url('./public/med.jpg')",
+        smsHero: "linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('./public/soms.jpeg')",
+        soeHero: "linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('./public/soe.jpeg')",
+        profile: " url('./public/school-of-business-logo.webp')"
         
       }
     },
