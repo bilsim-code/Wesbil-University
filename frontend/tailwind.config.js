@@ -57,7 +57,7 @@ export default {
         sobHero: "linear-gradient(rgba(8,0, 58, .5), rgba(8, 0, 58, .5)), url('./public/school-of-business-logo.webp')",
         contactImg: "url('./public/gallery-1.png')",
         contactImgMod: "linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .3)), url('./public/gallery-1.png')",
-        sotHero: "linear-gradient(rgba(8,0, 58, .3), rgba(8, 0, 58,.3)), url('./src/assets/princeton cs.jpg')",
+        sotHero: "linear-gradient(rgba(8,0, 58, .3), rgba(8, 0, 58,.3)), url('./public/princeton cs.jpg')",
         educ: "url('./src/assets/educ.jpg')",
         math: "url('./src/assets/math.jpg')",
         tech: "url('./src/assets/princeton-sot.jpg')",
