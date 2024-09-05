@@ -1,7 +1,7 @@
 import Navbar from "./Components/Navbar";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
-import MyLibrary from "./Pages/myLibrary";
+import MyLibrary from "./Pages/MyLibrary";
 import ERegistrar from "./Pages/ERegistrar";
 import Elearning from "./Pages/Elearning";
 import Portals from "./Pages/Portals";
