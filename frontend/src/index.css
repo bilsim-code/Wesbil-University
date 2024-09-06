@@ -189,9 +189,9 @@
     flex-direction: column;
 }
 
-/* .hero {
-    background:linear-gradient(rgba(0,0, 0, .5), rgba(0, 0, 0, .5)), url("../public/Princetonheader.jpg");
+.hero {
+    background:linear-gradient(rgba(0,0, 0, .5), rgba(0, 0, 0, .5)), url("../public/Princeton-header.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-} */
+}
