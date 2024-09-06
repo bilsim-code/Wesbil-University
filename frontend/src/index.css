@@ -203,3 +203,10 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.sob-hero {
+    background: linear-gradient(rgba(8,0, 58, .5), rgba(8, 0, 58, .5)), url('./public/school-of-business-logo.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

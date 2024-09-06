@@ -5,7 +5,7 @@ const Sob = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="hero bg-sobHero h-[100vh] bg-no-repeat bg-center bg-cover flex items-center justify-center text-center">
+      <div className="sob-hero h-[100vh] bg-no-repeat bg-center bg-cover flex items-center justify-center text-center">
         <div className="flex flex-col ">
           <h2 className="text-3xl font-bold ">
             Welcome to Wesbil University School of Business
