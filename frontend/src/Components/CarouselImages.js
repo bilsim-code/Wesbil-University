@@ -1,4 +1,4 @@
-import image1 from '../assets/princeton2.jpg';
+import image1 from '../assets/new-carousel.avif';
 import image2 from '../assets/princeton3.jpg'
 import image3 from '../assets/hero.png'
 import image4 from '../../public/princeton cs.jpg'
