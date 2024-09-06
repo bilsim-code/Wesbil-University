@@ -53,7 +53,7 @@ export default {
 
     extend: {
       backgroundImage: {
-        heroImage: "linear-gradient(rgba(8,0, 58, .5), rgba(8, 0, 58, .7)), url('./public/Princetonheader.jpg')",
+        heroImage: "linear-gradient(rgba(8,0, 58, .5), rgba(8, 0, 58, .7)), url('./public/Princeton-header.jpg')",
         sobHero: "linear-gradient(rgba(8,0, 58, .5), rgba(8, 0, 58, .5)), url('./public/school-of-business-logo.webp')",
         contactImg: "url('./public/gallery-1.png')",
         contactImgMod: "linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .3)), url('./public/gallery-1.png')",
