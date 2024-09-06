@@ -211,6 +211,34 @@
     background-size: cover;
 }
 
+.sot-hero {
+    background: linear-gradient(rgba(8,0, 58, .5), rgba(8, 0, 58,.3)), url('../public/princeton cs.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.somed-hero {
+    background: linear-gradient(rgba(8,0, 58, .3), rgba(8, 0, 58,.3)), url('../public/med.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sms-hero {
+    background: linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('../public/soms.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.soe-hero {
+    background: linear-gradient(rgba(8,0, 58, .6), rgba(8, 0, 58, .5)), url('../public/soe.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .sob-contactImg {
     background: url('../public/gallery-1.png');
     background-repeat: no-repeat;
