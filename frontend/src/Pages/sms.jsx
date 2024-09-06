@@ -5,7 +5,7 @@ const Sms = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="hero bg-smsHero h-[100vh] bg-no-repeat bg-center bg-cover flex items-center justify-center text-center">
+      <div className="sms-hero bg-smsHero h-[100vh] bg-no-repeat bg-center bg-cover flex items-center justify-center text-center">
         <div className="flex flex-col">
           <h2 className="text-3xl font-bold text-white">
             Welcome to Wesbil University School of Mathematics and Statistics
@@ -102,7 +102,7 @@ const Sms = () => {
           </div>
         </div>
 
-        <div className="sms-hero bg-fixed bg-no-repeat bg-top bg-cover h-[100vh] flex flex-col gap-10 rounded-md mt-10 shadow-xl">
+        <div className="sms-contactImg bg-fixed bg-no-repeat bg-top bg-cover h-[100vh] flex flex-col gap-10 rounded-md mt-10 shadow-xl">
           {/* join us */}
           <div className="flex basis-[50%] flex-col gap-4 bg-royalblue px-3 py-5 rounded-md footer-md:flex-row footer-md:items-center">
             <h3 className="bg-gold flex gap-2 w-fit py-2 px-4 rounded-full items-center font-bold footer-md:w-[200px] cursor-pointer group">

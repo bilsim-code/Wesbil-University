@@ -246,3 +246,35 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.sot-contactImg{
+    background: url('../public/princeton-sot.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.somed-contactImg {
+    background: url('../public/school-of-med.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sms-contactImg {
+    background: url('../public/math.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.soe-contactImg {
+    background: url('../public/educ.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
