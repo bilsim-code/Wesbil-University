@@ -196,6 +196,10 @@
     background-size: cover;
 }
 
-.join-us-cont {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .3)), url('./public/gallery-1.png')
+.apply-now {
+    background: linear-gradient(rgba(255, 255, 255, .01), rgba(255, 255, 255, .2)), url('./public/gallery-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
