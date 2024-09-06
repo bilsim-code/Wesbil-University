@@ -6,7 +6,7 @@ const StudentPortal = () => {
       <div className='flex flex-col items-center gap-3'>
         <img src={profile} alt="" title='your-profile' className='w-[140px] max-w-full'/>
         <h1 className='font-semibold text-[1.2rem] max-430px:text-base'><span className='text-royalblue uppercase font-mono'>Name: </span><span className='font-mono'>Ugly Ass Nigga</span></h1>
-        <h1 className='font-semibold text-[1.2rem] max-430px:text-base font-mono'><span className='text-royalblue uppercase'>ADM No: whatever/123 </span><span></span></h1>
+        <h1 className='font-semibold text-[1.2rem] max-430px:text-base font-mono'><span className='text-royalblue uppercase'>ADM No: </span><span>whatever/123</span></h1>
         <h1 className='font-semibold text-[1.2rem] max-430px:text-base font-mono'><span className='text-royalblue uppercase'>school: </span><span>School of Technology</span></h1>
         <h1 className='font-semibold text-[1.2rem] max-430px:text-base font-mono'><span className='text-royalblue uppercase'>Department: </span><span>Department of Computer Science</span></h1>
         <h1 className='font-semibold font-mono text-[1.2rem] max-430px:text-base text-center'><span className='text-royalblue uppercase'>Course: </span><span>Bachelor of Science in Computer Science</span></h1>
