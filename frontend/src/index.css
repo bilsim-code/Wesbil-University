@@ -210,3 +210,11 @@
     background-position: center;
     background-size: cover;
 }
+
+.sob-contactImg {
+    background: url('../public/gallery-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

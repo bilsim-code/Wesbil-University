@@ -105,7 +105,7 @@ const Sob = () => {
           </div>
         </div>
 
-        <div className="bg-contactImg bg-fixed bg-no-repeat bg-right bg-cover h-[100vh] flex flex-col gap-10 rounded-md mt-10 shadow-xl">
+        <div className="sob-contactImg bg-fixed bg-no-repeat bg-right bg-cover h-[100vh] flex flex-col gap-10 rounded-md mt-10 shadow-xl">
           {/* join us */}
           <div className="flex basis-[50%] flex-col gap-4 bg-royalblue  px-3 py-5 rounded-md footer-md:flex-row footer-md:items-center">
             <h3 className="bg-gold flex gap-2 w-fit py-2 px-4 rounded-full items-center font-bold footer-md:w-[200px] cursor-pointer group">
